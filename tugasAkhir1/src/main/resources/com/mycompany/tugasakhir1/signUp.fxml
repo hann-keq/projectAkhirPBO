@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.Controller">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="PaneDaftar" prefHeight="1080.0" prefWidth="1920.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="1103.0" layoutX="-2.0" layoutY="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-fill: #2D942D;" width="972.0" />
+            <Label layoutX="152.0" layoutY="510.0" stylesheets="@fonts/style.css" text="Daftar Akun" textFill="WHITE">
+               <font>
+                  <Font name="Paytone One" size="64.0" />
+               </font>
+            </Label>
+            <Label layoutX="1313.0" layoutY="116.0" stylesheets="@fonts/style.css" text="Daftar Akun">
+               <font>
+                  <Font name="Paytone One" size="40.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsername" layoutX="1178.0" layoutY="231.0" prefHeight="52.0" prefWidth="516.0" promptText="Username" style="-fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.leftAnchor="1178.0" AnchorPane.rightAnchor="226.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1195.0" layoutY="196.0" text="Username">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEmail" layoutX="1178.0" layoutY="533.0" prefHeight="52.0" prefWidth="516.0" promptText="Email" style="-fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.leftAnchor="1178.0" AnchorPane.rightAnchor="226.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtPassword" layoutX="1178.0" layoutY="634.0" prefHeight="52.0" prefWidth="516.0" promptText="Password" style="-fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.leftAnchor="1178.0" AnchorPane.rightAnchor="226.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1202.0" layoutY="499.0" text="Email">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="1203.0" layoutY="598.0" text="Password">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnBuatAkun" layoutX="1250.0" layoutY="838.0" mnemonicParsing="false" onAction="#Daftar" prefHeight="66.0" prefWidth="396.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: #2D942D;" text="Daftar Akun" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnKembali" layoutX="1038.0" layoutY="995.0" mnemonicParsing="false" onAction="#showWelcomeScreen" prefHeight="56.0" prefWidth="91.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #2D942D;" text="Kembali" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtNama" layoutX="1181.0" layoutY="332.0" prefHeight="52.0" prefWidth="516.0" promptText="Nama Lengkap" style="-fx-background-radius: 20; -fx-border-radius: 20;">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1188.0" layoutY="297.0" text="Nama Lengkap">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtAlamat" layoutX="1181.0" layoutY="432.0" prefHeight="52.0" prefWidth="516.0" promptText="Alamat" style="-fx-background-radius: 20; -fx-border-radius: 20;">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1188.0" layoutY="397.0" text="Alamat">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtKonfirmasiPassword" layoutX="1177.0" layoutY="744.0" prefHeight="52.0" prefWidth="516.0" promptText="Konfirmasi Password" style="-fx-background-radius: 20; -fx-border-radius: 20;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1202.0" layoutY="708.0" text="Konfirmasi Password">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
