@@ -74,8 +74,7 @@ public class Controller {
         String pass = txtPasswordLogin.getText();
         signUp cari = new signUp();
         if(txtUsernameLogin.getText().isEmpty() || txtPasswordLogin.getText().isEmpty()){
-            Alert c = new Alert(AlertType.WARNING,"Username atau password kosong",ButtonType.OK);
-            c.show();
+            AlertAlert.AlertTemplate("konfirmasi");
         }else{
             if(cari.SelectFromDatabase(username, pass)){
                 System.out.println("login berhasil");
