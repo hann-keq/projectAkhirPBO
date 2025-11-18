@@ -75,6 +75,8 @@ public class Controller {
         signUp cari = new signUp();
         if(cari.SelectFromDatabase(username, pass)){
             System.out.println("login berhasil");
+            Alert b = new Alert(AlertType.INFORMATION,"Login berhasil");
+                    b.show();
             App.setRoot("WelcomeScreen");
         }else{
             System.out.println("login gagal");
