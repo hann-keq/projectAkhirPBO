@@ -73,13 +73,18 @@ public class Controller {
         String username = txtUsernameLogin.getText();
         String pass = txtPasswordLogin.getText();
         signUp cari = new signUp();
-        if(cari.SelectFromDatabase(username, pass)){
-            System.out.println("login berhasil");
-            Alert b = new Alert(AlertType.INFORMATION,"Login berhasil");
-                    b.show();
-            App.setRoot("WelcomeScreen");
+        if(txtUsernameLogin.getText().isEmpty() || txtPasswordLogin.getText().isEmpty()){
+            Alert c = new Alert(AlertType.WARNING,"Username atau password kosong",ButtonType.OK);
+            c.show();
         }else{
-            System.out.println("login gagal");
+            if(cari.SelectFromDatabase(username, pass)){
+                System.out.println("login berhasil");
+                Alert b = new Alert(AlertType.INFORMATION,"Login berhasil");
+                    b.show();
+                App.setRoot("WelcomeScreen");
+            }else{
+                System.out.println("login gagal");
+        }
         }
     }
 }
