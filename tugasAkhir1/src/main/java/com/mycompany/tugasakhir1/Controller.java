@@ -8,12 +8,14 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Set;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Rectangle;
 
 /**
  *
@@ -21,7 +23,8 @@ import javafx.scene.layout.AnchorPane;
  */
 public class Controller {
   
- 
+ @FXML
+ private Rectangle coba2;
    
    @FXML
     private TextField txtUsername,txtEmail,txtPassword,txtNama,txtKonfirmasiPassword,
@@ -30,19 +33,34 @@ public class Controller {
      @FXML
     private void showWelcomeScreen() throws IOException{
        App.setRoot("welcomeScreen");
+       Animasi.AnimasiTranslate(coba, 500, 10, 3000, true, 2);
+       System.out.println(coba.getTranslateX() + " : " + coba.getTranslateY());
+      Animasi.startAnimate();
+
     }
-    
+    public void animateControll(){
+    Animasi.AnimasiTranslate(coba, 500, 10, 3000, true, 2);
+    Animasi.AnimasiRotate(coba, 90, 1000,1);
+    Animasi.AnimasiTranslate(coba2, 500, 10, 3000, true, 2);
+    Animasi.AnimasiRotate(coba2, 90, 1000,1);
+    }
     @FXML
     private void showSignUp()throws IOException{
       App.setRoot("signUp");
+      
+      
     }
     
     @FXML
     private void showLogin() throws IOException{
       App.setRoot("login");
+   
+      
+      Animasi.startAnimate();
     }
    
-    
+    @FXML
+    private Rectangle coba;
     
    
   
@@ -59,6 +77,7 @@ public class Controller {
             Alert a = new Alert(AlertType.WARNING,"Form Tidk boleh kosong",ButtonType.OK);
             a.show();
         }else{
+        
         signUp handler = new signUp();
         handler.processSignUp(username,email,pass,alamat,nama);
         handler.InputToDatabase(username,email,pass,alamat,nama);
@@ -70,6 +89,7 @@ public class Controller {
     }
     @FXML
     private void Login()throws IOException, SQLException, ClassNotFoundException{
+         
         String username = txtUsernameLogin.getText();
         String pass = txtPasswordLogin.getText();
         signUp cari = new signUp();
