@@ -22,38 +22,52 @@ public class signUp  {
     
     
     
-  public void processSignUp(String username,String email,String pass,String alamat,String nama)throws IOException{
-      System.out.println("Data");
-        System.out.println(username);
-        System.out.println(pass);
-        System.out.println(email);
-       
-       
-  }
-  public void InputToDatabase(String username,String email,String pass,String alamat,String nama) throws SQLException{
-    try(Connection conn = Database.getConnection()){
-    String sql = "INSERT INTO konsumen(username,passwd,nama_konsumen,alamat,email) VALUES (?,?,?,?,?)";
-    PreparedStatement ps = conn.prepareStatement(sql);
-    ps.setString(1, username);
-    ps.setString(2, pass);
-    ps.setString(3, nama);
-    ps.setString(4, alamat);
-    ps.setString(5, email);
-    ps.executeUpdate();
+ 
+  public void InputToDatabase(String username,String password,String nama,String email,String alamat) {
+    try{
+        Connection conn = Database.getConnection();
+        String sql = "INSERT INTO konsumen(username,passwd,nama_konsumen,email,alamat) VALUES (?,?,?,?,?)";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setString(1, username);
+        ps.setString(2, password);
+        ps.setString(3, nama);
+        ps.setString(4, email);
+        ps.setString(5, alamat);
+        ps.execute();
     
         System.out.println("Berhasil update database");
     }catch(Exception e){
+        e.printStackTrace();
     }
   }
-   public boolean SelectFromDatabase(String usernameOrEmail,String pass) throws ClassNotFoundException, SQLException{
-    try(Connection conn = Database.getConnection()){
-     String sql = "SELECT * FROM KONSUMEN WHERE (username = ? OR email = ?) AND Passwd = ?" ;
-    PreparedStatement ps = conn.prepareStatement(sql);
-    ps.setString(1, usernameOrEmail);
-    ps.setString(2, usernameOrEmail);
-    ps.setString(3, pass);
-    ResultSet rs = ps.executeQuery();
-   return rs.next();
-   }
+   public boolean cariAkun(String email,String pass){
+       boolean found = false;
+    try{
+         Connection conn = Database.getConnection();
+         String sql = "SELECT * FROM KONSUMEN WHERE email = ? AND passwd = ?" ;
+         PreparedStatement ps = conn.prepareStatement(sql);
+         ps.setString(1, email);
+         ps.setString(2, pass);
+         ResultSet rs = ps.executeQuery();
+         found = rs.next();
+   
+   }catch(Exception e){
+        e.printStackTrace();
+   }return found;
 }
+   
+   public boolean CekUsername(String username){
+       boolean cocok = false;
+    try{
+        Connection conn = Database.getConnection();
+        String sql = "SELECT * FROM konsumen Where username = ?";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setString(1, username);
+        ResultSet rs = ps.executeQuery();
+        cocok = rs.next();
+        System.out.println(cocok);
+    }catch(Exception e){
+        e.printStackTrace();
+    }return cocok;
+   }
 }

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" snapToPixel="false" stylesheets="@fonts/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.Controller">
+   <children>
+      <Text fill="#4a7930" layoutX="714.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selamat Datang,Pengguna">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Text>
+      <Text layoutX="895.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mari pilih lokasi">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="30" arcWidth="30" fill="WHITE" height="732.0" layoutX="672.0" layoutY="238.0" stroke="#2f61149c" strokeType="INSIDE" width="598.0" />
+      <Text layoutX="726.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pilih lokasi">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="728.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ini Membantu mencari makanan di area anda">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="732.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mencari lokasi">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="30" arcWidth="30" fill="WHITE" height="40.0" layoutX="731.0" layoutY="423.0" stroke="#40b800b0" strokeType="INSIDE" width="480.0" />
+      <Text layoutX="736.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lokasi yang populer oleh pengguna" />
+      <Rectangle arcHeight="30" arcWidth="30" fill="WHITE" height="87.0" layoutX="747.0" layoutY="556.0" stroke="#44c300" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="30" arcWidth="30" fill="WHITE" height="87.0" layoutX="994.0" layoutY="555.0" stroke="#00000040" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="30" arcWidth="30" fill="WHITE" height="87.0" layoutX="747.0" layoutY="689.0" stroke="#00000040" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="30" arcWidth="30" fill="WHITE" height="87.0" layoutX="994.0" layoutY="688.0" stroke="#00000040" strokeType="INSIDE" width="200.0" />
+      <ImageView fitHeight="32.0" fitWidth="27.0" layoutX="767.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../photos/location.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="805.0" layoutY="605.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kota Purwokerto">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="32.0" fitWidth="27.0" layoutX="767.0" layoutY="717.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../photos/location.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="27.0" layoutX="1011.0" layoutY="719.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../photos/location.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="27.0" layoutX="1010.0" layoutY="587.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../photos/location.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="1050.0" layoutY="605.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kota Bandung">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="810.0" layoutY="737.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kota Cilacap">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="1049.0" layoutY="736.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kota Yogyakarta">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Line endX="149.0" layoutX="772.0" layoutY="856.0" startX="-100.0" />
+      <Line endX="149.0" layoutX="1120.0" layoutY="856.0" startX="-100.0" />
+      <Text layoutX="956.0" layoutY="860.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atau">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button layoutX="743.0" layoutY="891.0" mnemonicParsing="false" onAction="#showHome" prefHeight="40.0" prefWidth="458.0" style="-fx-background-color: #44C300; -fx-border-radius: 20; -fx-background-radius: 20;" text="Gunakan lokasi says sekarang" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Ellipse fx:id="cobaLingkaranBlur1" fill="#44c200b5" layoutX="1920.0" layoutY="45.0" radiusX="437.0" radiusY="722.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" />
+      <Ellipse fx:id="cobaLingkaranBlur" fill="#44c3009c" layoutX="43.0" layoutY="1376.0" radiusX="437.0" radiusY="722.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>

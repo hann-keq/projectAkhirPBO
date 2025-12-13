@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" snapToPixel="false" stylesheets="@fonts/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.Controller">
+   <children>
+      <Group layoutX="-4.0" layoutY="-1.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#38a100b8" height="103.0" stroke="BLACK" strokeType="INSIDE" width="1924.0" />
+            <Label layoutX="42.0" layoutY="28.0" text="FoodCycle" textFill="WHITE">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <ScrollPane hbarPolicy="NEVER" layoutY="100.0" minViewportHeight="989.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="989.0" prefViewportHeight="989.0" prefWidth="1918.0" scaleShape="false">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1922.0">
+               <children>
+                  <Group layoutX="158.0" layoutY="108.0">
+                     <children>
+                        <Text fill="#246600" layoutX="36.0" layoutY="12.1015625" strokeType="OUTSIDE" strokeWidth="0.0" text="Mencari Makanan Disekitar">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#44c20059" height="47.0" layoutX="8.0" layoutY="-21.0" stroke="#44c30000" strokeType="INSIDE" width="452.0" />
+                     </children>
+                  </Group>
+                  <Group layoutX="165.0" layoutY="155.0">
+                     <children>
+                        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffffff59" height="47.0" stroke="#00000038" strokeType="INSIDE" width="1729.0" />
+                        <Text layoutX="47.0" layoutY="32.1015625" strokeType="OUTSIDE" strokeWidth="0.0" text="Ketik untuk mencari">
+                           <font>
+                              <Font name="Inter Semi Bold" size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="1000.0" layoutY="249.0">
+                     <children>
+                        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffffff47" height="47.0" stroke="#00000038" strokeType="INSIDE" width="205.0" />
+                        <Text layoutX="67.0" layoutY="32.1015625" strokeType="OUTSIDE" strokeWidth="0.0" text="Heavy food">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="332.0" layoutY="1024.0">
+                     <children>
+                        <Rectangle arcHeight="30" arcWidth="30" fill="WHITE" height="482.0" layoutX="3.0" layoutY="3.0" stroke="BLACK" strokeType="OUTSIDE" width="370.0">
+                           
+                        </Rectangle>
+                        <ImageView fitHeight="145.0" fitWidth="370.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" style="-fx-smooth: true;">
+                           <image>
+                              <Image url="@../../../photos/brokoli.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="29.0" layoutY="183.78515625" strokeType="OUTSIDE" strokeWidth="0.0" text="Brokoli">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Text>
+                        <Text fill="RED" layoutX="77.0" layoutY="249.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="Experied 1 hari lagi" />
+                        <Text layoutX="82.0" layoutY="296.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="2kg" />
+                        <Icon content="LOCATION_ON" layoutX="33.0" layoutY="322.0" />
+                        <Text layoutX="78.0" layoutY="339.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="Purwokerto" />
+                        <Button layoutX="32.0" layoutY="427.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="319.0" style="-fx-background-color: #44C300; -fx-border-radius: 20; -fx-background-radius: 20;" text="Pilih makanan" />
+                        <Text layoutX="33.0" layoutY="403.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="100 m" />
+                        <Text layoutX="305.0" layoutY="403.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="By user" />
+                     </children>
+                  </Group>
+                  <Group layoutX="795.0" layoutY="1022.0">
+                     <children>
+                        <Rectangle arcHeight="30" arcWidth="30" fill="WHITE" height="482.0" layoutX="3.0" layoutY="3.0" stroke="BLACK" strokeType="OUTSIDE" width="370.0">
+                           
+                        </Rectangle>
+                        <ImageView fitHeight="145.0" fitWidth="370.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" style="-fx-smooth: true;">
+                           <image>
+                              <Image url="@../../../photos/brokoli.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="29.0" layoutY="183.78515625" strokeType="OUTSIDE" strokeWidth="0.0" text="Brokoli">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Text>
+                        <Text fill="RED" layoutX="77.0" layoutY="249.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="Experied 1 hari lagi" />
+                        <Text layoutX="82.0" layoutY="296.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="2kg" />
+                        <Icon content="LOCATION_ON" layoutX="33.0" layoutY="322.0" />
+                        <Text layoutX="78.0" layoutY="339.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="Purwokerto" />
+                        <Button layoutX="32.0" layoutY="427.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="319.0" style="-fx-background-color: #44C300; -fx-border-radius: 20; -fx-background-radius: 20;" text="Pilih makanan" />
+                        <Text layoutX="33.0" layoutY="403.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="100 m" />
+                        <Text layoutX="305.0" layoutY="403.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="By user" />
+                     </children>
+                  </Group>
+                  <Group blendMode="SRC_ATOP" layoutX="1263.0" layoutY="1034.0">
+                     <children>
+                        <Rectangle arcHeight="30" arcWidth="30" fill="WHITE" height="482.0" layoutX="3.0" layoutY="-14.0" stroke="BLACK" strokeType="OUTSIDE" width="370.0">
+                           
+                        </Rectangle>
+                        <Text layoutX="29.0" layoutY="183.78515625" strokeType="OUTSIDE" strokeWidth="0.0" text="Brokoli">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Text>
+                       
+                        <ImageView fitHeight="145.0" fitWidth="370.0" layoutX="-7.0" layoutY="-5.0" pickOnBounds="true" style="-fx-smooth: true;">
+                           <image>
+                              <Image url="@../../../photos/brokoli.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="RED" layoutX="77.0" layoutY="249.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="Experied 1 hari lagi" />
+                        
+                        <Text layoutX="82.0" layoutY="296.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="2kg" />
+                        <Icon content="LOCATION_ON" layoutX="33.0" layoutY="322.0" />
+                        <Text layoutX="78.0" layoutY="339.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="Purwokerto" />
+                        <Button layoutX="32.0" layoutY="427.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="319.0" style="-fx-background-color: #44C300; -fx-border-radius: 20; -fx-background-radius: 20;" text="Pilih makanan" />
+                        <Text layoutX="33.0" layoutY="403.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="100 m" />
+                        <Text layoutX="305.0" layoutY="403.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="By user" />
+                     </children>
+                  </Group>
+                  <Group layoutX="320.0" layoutY="423.0">
+                     <children>
+                        <Rectangle arcHeight="30" arcWidth="30" fill="WHITE" height="482.0" layoutX="3.0" layoutY="3.0" stroke="BLACK" strokeType="OUTSIDE" width="370.0">
+                          
+                           
+                        </Rectangle>
+                        <ImageView fitHeight="145.0" fitWidth="370.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../photos/brokoli.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="29.0" layoutY="183.78515625" strokeType="OUTSIDE" strokeWidth="0.0" text="Brokoli">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Text>
+                        <Text fill="RED" layoutX="77.0" layoutY="249.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="Experied 1 hari lagi" />
+                        <Text layoutX="82.0" layoutY="296.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="2kg" />
+                        <Icon content="LOCATION_ON" layoutX="33.0" layoutY="322.0" />
+                        <Text layoutX="78.0" layoutY="339.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="Purwokerto" />
+                        <Button layoutX="32.0" layoutY="427.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="319.0" style="-fx-background-color: #44C300; -fx-border-radius: 20; -fx-background-radius: 20;" text="Pilih makanan" />
+                        <Text layoutX="33.0" layoutY="403.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="100 m" />
+                        <Text layoutX="305.0" layoutY="403.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="By user" />
+                     </children>
+                  </Group>
+                  <Group blendMode="SRC_ATOP" layoutX="1266.0" layoutY="416.0">
+                     <children>
+                        <Rectangle arcHeight="30" arcWidth="30" fill="WHITE" height="482.0" layoutX="3.0" layoutY="3.0" stroke="BLACK" strokeType="OUTSIDE" width="370.0">
+                           
+                        </Rectangle>
+                        <Text layoutX="29.0" layoutY="183.78515625" strokeType="OUTSIDE" strokeWidth="0.0" text="Brokoli">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="145.0" fitWidth="370.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" style="-fx-smooth: true;">
+                           <image>
+                              <Image url="@../../../photos/brokoli.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="RED" layoutX="77.0" layoutY="249.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="Experied 1 hari lagi" />
+                        <Text layoutX="82.0" layoutY="296.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="2kg" />
+                        <Icon content="LOCATION_ON" layoutX="33.0" layoutY="322.0" />
+                        <Text layoutX="78.0" layoutY="339.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="Purwokerto" />
+                        <Button layoutX="32.0" layoutY="427.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="319.0" style="-fx-background-color: #44C300; -fx-border-radius: 20; -fx-background-radius: 20;" text="Pilih makanan" />
+                        <Text layoutX="33.0" layoutY="403.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="100 m" />
+                        <Text layoutX="305.0" layoutY="403.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="By user" />
+                     </children>
+                  </Group>
+                  <Group layoutX="790.0" layoutY="420.0">
+                     <children>
+                        <Rectangle arcHeight="30" arcWidth="30" fill="WHITE" height="482.0" layoutX="3.0" layoutY="3.0" stroke="BLACK" strokeType="OUTSIDE" width="370.0">
+                          
+                        </Rectangle>
+                        <ImageView fitHeight="145.0" fitWidth="370.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" style="-fx-smooth: true;">
+                           <image>
+                              <Image url="@../../../photos/brokoli.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="29.0" layoutY="183.78515625" strokeType="OUTSIDE" strokeWidth="0.0" text="Brokoli">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Text>
+                        <Text fill="RED" layoutX="77.0" layoutY="249.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="Experied 1 hari lagi" />
+                        <Text layoutX="82.0" layoutY="296.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="2kg" />
+                        <Icon content="LOCATION_ON" layoutX="33.0" layoutY="322.0" />
+                        <Text layoutX="78.0" layoutY="339.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="Purwokerto" />
+                        <Button layoutX="32.0" layoutY="427.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="319.0" style="-fx-background-color: #44C300; -fx-border-radius: 20; -fx-background-radius: 20;" text="Pilih makanan" />
+                        <Text layoutX="33.0" layoutY="403.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="100 m" />
+                        <Text layoutX="305.0" layoutY="403.63018798828125" strokeType="OUTSIDE" strokeWidth="0.0" text="By user" />
+                     </children>
+                  </Group>
+                  <Text layoutX="189.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Showing 6 available items">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Group layoutX="802.0" layoutY="253.0">
+                     <children>
+                        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffffff47" height="47.0" layoutY="-4.0" stroke="#00000038" strokeType="INSIDE" width="162.0" />
+                        <Text layoutX="69.0" layoutY="28.1015625" strokeType="OUTSIDE" strokeWidth="0.0" text="Baked">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="616.0" layoutY="249.0">
+                     <children>
+                        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffffff47" height="47.0" stroke="#00000038" strokeType="INSIDE" width="162.0" />
+                        <Text layoutX="69.0" layoutY="32.1015625" strokeType="OUTSIDE" strokeWidth="0.0" text="Drinks">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="369.0" layoutY="249.0">
+                     <children>
+                        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffffff47" height="47.0" layoutX="-8.0" stroke="#00000038" strokeType="INSIDE" width="216.0" />
+                        <Text layoutX="72.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vegetables">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Group>
+                  <Group layoutX="160.0" layoutY="250.0">
+                     <children>
+                        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#40b800" height="47.0" stroke="#00000038" strokeType="INSIDE" width="167.0" />
+                        <Text layoutX="94.0" layoutY="32.1015625" strokeType="OUTSIDE" strokeWidth="0.0" text="All">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="29.0" layoutY="9.0" pickOnBounds="true" smooth="false" />
+                     </children>
+                  </Group>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Group />
+      <Ellipse fx:id="LingkaranBlurHome" fill="#44c20073" layoutX="1887.0" layoutY="1084.0" radiusX="228.0" radiusY="436.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" />
+      <Ellipse fx:id="LingkaranBlurHome1" fill="#44c20073" layoutX="-61.0" layoutY="494.0" radiusX="198.0" radiusY="392.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" />
+      <JFXButton buttonType="RAISED" ripplerFill="#d02828" />
+      <Group>
+         <children>
+            <ImageView fitHeight="63.0" fitWidth="59.0" layoutX="1667.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../photos/bussiness-man.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="1736.0" layoutY="39.0" onMouseClicked="#showProfile" text="Pengguna" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+   </children>
+</AnchorPane>

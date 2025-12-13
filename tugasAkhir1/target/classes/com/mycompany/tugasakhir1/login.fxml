@@ -1,54 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.Controller">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" snapToPixel="false" stylesheets="@fonts/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.Controller">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="1143.0" layoutX="-36.0" layoutY="-41.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-fill: #2D942D;" width="972.0" />
-      <Label layoutX="162.0" layoutY="520.0" stylesheets="@fonts/style.css" text="Login Akun" textFill="WHITE">
-         <font>
-            <Font name="Paytone One" size="64.0" />
-         </font>
-      </Label>
-      <Label layoutX="1323.0" layoutY="290.0" stylesheets="@fonts/style.css" text="Login Akun">
-         <font>
-            <Font name="Paytone One" size="40.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtUsernameLogin" layoutX="1198.0" layoutY="413.0" prefHeight="52.0" prefWidth="516.0" promptText="Username atau Email" style="-fx-background-radius: 20; -fx-border-radius: 20;">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </TextField>
-      <Label layoutX="1205.0" layoutY="378.0" text="Username atau Email">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtPasswordLogin" layoutX="1193.0" layoutY="523.0" prefHeight="52.0" prefWidth="516.0" promptText="Password" style="-fx-background-radius: 20; -fx-border-radius: 20;">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </TextField>
-      <Label layoutX="1208.0" layoutY="487.0" text="Password">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnBuatAkun" layoutX="1249.0" layoutY="625.0" mnemonicParsing="false" onAction="#Login" prefHeight="66.0" prefWidth="396.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: #2D942D;" text="Masuk" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
+      <Ellipse fx:id="LingkaranBlurHomeAtas" layoutX="230.0" layoutY="230.0" radiusX="337.0" radiusY="610.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="0.32701421800947866" endY="0.8009478672985781" startX="0.33175355450236965" startY="0.02369668246445497">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2666666805744171" green="0.7647058963775635" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9736841917037964" green="0.9736841917037964" blue="0.9736841917037964" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Ellipse>
+      <Ellipse fx:id="LingkaranBlurHome" layoutX="1588.0" layoutY="1486.0" radiusX="437.0" radiusY="722.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="0.4218009478672986" endY="0.5639810426540284" startX="0.1611374407582938">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2666666805744171" green="0.7647058963775635" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9736841917037964" green="0.9736841917037964" blue="0.9736841917037964" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Ellipse>
+      <Button defaultButton="true" disable="true" layoutX="622.0" layoutY="441.0" mnemonicParsing="false" onAction="#showLogin" prefHeight="42.0" prefWidth="296.0" style="-fx-border-color: #44C300; -fx-focus-traversable: true;" stylesheets="@fonts/style.css" text="Login">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
       </Button>
-      <Button fx:id="btnKembali" layoutX="1048.0" layoutY="1005.0" mnemonicParsing="false" onAction="#showWelcomeScreen" prefHeight="56.0" prefWidth="91.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #2D942D;" text="Kembali" textFill="WHITE">
+      <Label layoutX="824.0" layoutY="328.0" text="FoodCycle">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold" size="52.0" />
          </font>
+      </Label>
+      <Button layoutX="978.0" layoutY="440.0" mnemonicParsing="false" onAction="#showSignUp" prefHeight="42.0" prefWidth="296.0" style="-fx-focus-traversable: false;" stylesheets="@fonts/style.css" text="Buat Akun">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="353.0" layoutX="650.0" layoutY="521.0" stroke="TRANSPARENT" strokeType="INSIDE" width="610.0" />
+      <Label layoutX="691.0" layoutY="553.0" prefHeight="17.0" prefWidth="227.0" style="-fx-font-family: Inter-SemiBold;" stylesheets="@fonts/style.css" text="Selamat Kembali Lagi">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="691.0" layoutY="602.0" text="Login untuk masuk ke akun yang sudah anda buat">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" layoutX="683.0" layoutY="667.0" prefHeight="25.0" prefWidth="544.0" />
+      <TextField fx:id="txtPassword" layoutX="683.0" layoutY="752.0" prefHeight="25.0" prefWidth="544.0" />
+      <Label layoutX="691.0" layoutY="642.0" text="Email">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="683.0" layoutY="718.0" text="Kata Sandi">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="683.0" layoutY="804.0" mnemonicParsing="false" onAction="#Login" prefHeight="35.0" prefWidth="544.0" style="-fx-background-color: #2A7700; -fx-border-radius: 20; -fx-background-radius: 20;" text="Login" textFill="WHITE" />
    </children>
 </AnchorPane>
