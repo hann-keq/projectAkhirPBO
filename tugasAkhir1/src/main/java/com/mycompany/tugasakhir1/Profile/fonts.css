@@ -1,0 +1,14 @@
+@font-face{
+    font-family:'Inter-Bold';
+    src:url('Inter-Bold.otf');
+}
+@font-face{
+    font-family: 'Inter-Regular';
+    src:url('Inter-Regular.otf');
+}
+
+.secondTitle{
+    -fx-font-family:"Inter-Bold";
+    -fx-font-size:24;
+    -fx-font-weight:bold;
+}

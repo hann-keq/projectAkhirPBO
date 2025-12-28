@@ -1,18 +1,107 @@
-
-
-
-@font-face{
-    font-family:'Paytone One';
-    src:url("PaytoneOne.ttf")
-}
 @font-face{
     font-family:'Inter-Bold';
-    src:url('fonts/Inter-Bold.otf');
+    src:url('Inter-Bold.otf');
+}
+@font-face{
+    font-family: 'Inter-Regular';
+    src:url('Inter-Regular.otf');
 }
 
 .root{
+    -fx-font-family:"Inter-Regular";
+    -fx-font-size:16;
+    -fx-focus-color:transparent;
+    -fx-faint-focus-color:#d3d3d3;
+}
+#title{
     -fx-font-family:"Inter-Bold";
+    -fx-font-size:56;
+    -fx-font-weight:bold;
+}
+#titleColored{
+    -fx-font-family:"Inter-Bold";
+    -fx-font-size:32;
+    -fx-font-weight:bold;
+    -fx-fill:#44C300;
 }
 
+#topMenu{
+    -fx-font-size:24;
+    
+}
+.labelTitle{
+    -fx-font-family:"Inter-Bold";
+    -fx-font-size:24;
+    -fx-font-weight:bold;
+    
+}
+
+.buttonProfile{
+    -fx-background-radius:100;
+    -fx-padding:0;
+   
+    
+}
+
+.button,.button:focused{
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+}
+.button:selected{
+    -fx-background-color:#40b800;
+}
+.button:hover.jfx-rippler { -jfx-rippler-fill: black; }
+   
+.textField:focused{
+   -fx-background-color: white;
+   -fx-border-color: #cccccc; /* contoh warna fokus */
+    -fx-border-width: 1;
+ 
+}
+
+.passwordField:focused{
+   -fx-background-color: white;
+   -fx-border-color: #cccccc; /* contoh warna fokus */
+   -fx-border-width: 1;
+}
+.btnLocation{
+    -fx-border-color:#000000;
+    -fx-border-width:0.5;
+    -fx-background-color:#ffffff;
+    -fx-background-radius:20;
+    -fx-border-radius:20;
+    
+    
+}
+
+
+.btnLocation:selected{
+    -fx-background-color:#ffffff;
+    -fx-border-color:#44C300
+    
+}
+.container{
+    -fx-background-color:white;
+}
+.scrollPane{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+}
+.scrollPane >.viewport{
+    -fx-background-color: transparent;
+}
+.jfx-toggle-button {
+    -jfx-disable-visual-focus: true;
+}
+
+.jfx-toggle-button .jfx-rippler{
+    -jfx-rippler-disabled: true;
+}
+.jfx-toggle-button:selected{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-text-fill:#40b800;
+}
 
 

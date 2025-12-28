@@ -8,7 +8,10 @@ import javafx.stage.Stage;
 import javafx.scene.text.Font;
 
 import java.io.IOException;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.image.Image;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 
@@ -32,30 +35,14 @@ public class App extends Application {
       stage.setScene(scene);
       String css = this.getClass().getResource("/com/mycompany/tugasakhir1/fonts/style.css").toExternalForm();
         scene.getStylesheets().add(css);
-      stage.show();
-      Animasi.startAnimate();
+        stage.show();
+      
         }catch(Exception e){
             e.printStackTrace();}
     }
 
-    static Object setRoot(String fxml) throws IOException {
-        loader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        Parent root = loader.load();
-        Animasi.startAnimate();
-        String css = App.class.getResource("/com/mycompany/tugasakhir1/fonts/style.css").toExternalForm();
-        scene.getStylesheets().add(css);
-        scene.setRoot(root);
-         return loader.getController();
-    }
-      public static FXMLLoader getLoader() {
-        return loader;
-    }
-
-
-    
-
-    public static void main(String[] args) {
-       
+  
+        public static void main(String[] args) {
         launch();
     }
     

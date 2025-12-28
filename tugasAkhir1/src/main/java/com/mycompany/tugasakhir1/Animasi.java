@@ -24,11 +24,7 @@ import javafx.util.Duration;
  */
 public class Animasi {
     
-    public static void startAnimate(){
-     FXMLLoader loader = App.getLoader();
-      Controller wc = loader.getController();
-      wc.animateControll();
-    }
+
     public static void AnimasiTranslate(Node node, double X ,double Y,int duration,boolean reverse,int ulang){
         TranslateTransition tt = new TranslateTransition();
         tt.setNode(node);
@@ -39,6 +35,7 @@ public class Animasi {
         
         tt.setCycleCount(ulang);
         tt.play();
+        System.out.println("animasi di play");
     }
     public static void AnimasiTranslate(Node node,double X,double Y,int duration,boolean reverse){
     TranslateTransition tt = new TranslateTransition();
@@ -48,7 +45,10 @@ public class Animasi {
     tt.setDuration(Duration.millis(duration));
     tt.setAutoReverse(reverse);
     tt.setCycleCount(TranslateTransition.INDEFINITE);
-    tt.play();}
+    tt.play();
+     System.out.println("animasi di play");
+    }
+    
     
     public static void AnimasiRotate(Node node, int angle,int duration,int ulang){
         RotateTransition rt = new RotateTransition();
