@@ -24,6 +24,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -51,6 +52,7 @@ public class HomeController implements Initializable {
     private final CRUD crud = new CRUD();
     private List<Makanan> dataAsli;
     private List<Makanan> dataTampil;
+    private int count =0;
     @FXML private ToggleGroup filter;
     
     @FXML private JFXToggleNode btnAll,btnVegetable,btnHeavy,btnDrink,btnBaked;
@@ -60,7 +62,9 @@ public class HomeController implements Initializable {
     @FXML
     private FlowPane container;
     
-    @FXML private Label lblRincian;
+    @FXML private Label lblRincian,lblCounter;
+    
+    @FXML private Group groupCounter;
     
     @FXML private Circle goToProfile;
     @Override
@@ -82,8 +86,18 @@ private void loadDataAwal(){
     tampilkanData();
     }
 
+public void addCart(Makanan m){
+count++;
+    System.out.println(count);
+lblCounter.setText(String.valueOf(count));
+if(count != 0){
+groupCounter.setVisible(true);
+}
+}
 private void tampilkanData(){
     container.getChildren().clear();
+    System.out.println("After clear: " + container.getChildren().size());
+
     lblRincian.setText("Showing "+dataTampil.size()+ " available items");
      for (Makanan item : dataTampil) {
             try {
@@ -93,26 +107,39 @@ private void tampilkanData(){
                 // Set data ke card
                 CardMakananController ctrl = loader.getController();
                 ctrl.setData(item);                                         //ambil data dari CRUD.java
-
+                ctrl.onClick(this :: addCart);
+                System.out.println("count ++ = "+count );
                 container.getChildren().add(card);
                
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
+        }System.out.println("After add : " + container.getChildren().size());
+
     
     }
 
-private void setupListener(){
-    btnAll.setOnAction(eh -> reset());
-    btnVegetable.setOnAction(eh -> tampilkanDataByFilter("vegetable"));
-    btnHeavy.setOnAction(eh -> tampilkanDataByFilter("heavy food") );
-    btnDrink.setOnAction(eh -> tampilkanDataByFilter("drink"));
-    btnBaked.setOnAction(eh -> tampilkanDataByFilter("baked"));
-    goToProfile.setOnMouseClicked(eh -> showProfile(eh));
-    
+private void setupListener() {
+    filter.selectedToggleProperty().addListener((obs, oldToggle, newToggle) -> {
+        if (newToggle == null) return;
+
+        if (newToggle == btnAll) {
+            reset();
+        } else if (newToggle == btnVegetable) {
+            tampilkanDataByFilter("vegetable");
+        } else if (newToggle == btnHeavy) {
+            tampilkanDataByFilter("heavy food");
+        } else if (newToggle == btnDrink) {
+            tampilkanDataByFilter("drink");
+        } else if (newToggle == btnBaked) {
+            tampilkanDataByFilter("baked");
+        }
+    });
+
+    goToProfile.setOnMouseClicked(this::showProfile);
 }
+
 
 
 private void tampilkanDataByFilter(String filter){

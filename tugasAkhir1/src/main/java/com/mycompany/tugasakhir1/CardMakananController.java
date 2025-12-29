@@ -5,6 +5,7 @@
 package com.mycompany.tugasakhir1;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.function.Consumer;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -16,6 +17,8 @@ import javafx.scene.shape.Rectangle;
  * @author hanif
  */
 public class CardMakananController implements Initializable {
+    private Consumer<Makanan> onClick;
+    private Makanan makanan;
      @FXML private ImageView myImage;
 
     @FXML private Label lblNama,lblToko,lblJarak,lblHarga,lblLokasi,lblBerat,lblTanggal;
@@ -35,10 +38,26 @@ public void initialize(URL url ,ResourceBundle rb){
     clip.setArcWidth(30);
     
     myImage.setClip(clip);
+    buttonClick();
     }
 
 
+    public void setMakanan(Makanan makanan){
+        this.makanan = makanan;
+   }
     
+    public void onClick (Consumer <Makanan> onClick){
+        this.onClick = onClick;
+    }
+    
+    @FXML
+    public void buttonClick(){
+        BtnPilih.setOnAction(eh ->{
+        if(onClick != null){
+            System.out.println("pnClick" + onClick);
+            onClick.accept(makanan);
+        }});
+    }
 
     // Set data makanan ke card
     public void setData(Makanan makanan) {

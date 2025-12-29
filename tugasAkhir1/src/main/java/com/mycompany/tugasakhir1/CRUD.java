@@ -29,20 +29,20 @@ public class CRUD  {
      private final List<profilKonsumen> listProfile = new ArrayList<>();
      private final List <Makanan> list = new ArrayList<>();
      
-    private void result (ResultSet rsm) throws SQLException{
+    private void result (ResultSet rs) throws SQLException{
     
     
-    while(rsm.next()){
+    while(rs.next()){
                 list.add(new Makanan(
                     
-                    rsm.getString("nama_toko"),
-                    rsm.getString("nama_kota"),
-                    rsm.getString("nama_makanan"),
-                    rsm.getInt("jumlah_tersedia"),
-                    rsm.getInt("harga"),
-                    rsm.getInt("jarak"),
-                    rsm.getString("jenis_makanan"),
-                    rsm.getString("makanan_minuman")
+                    rs.getString("nama_toko"),
+                    rs.getString("nama_kota"),
+                    rs.getString("nama_makanan"),
+                    rs.getInt("jumlah_tersedia"),
+                    rs.getInt("harga"),
+                    rs.getInt("jarak"),
+                    rs.getString("jenis_makanan"),
+                    rs.getString("makanan_minuman")
                   
                 ));
                 banyak = list;
@@ -50,6 +50,7 @@ public class CRUD  {
    
     }
     public List<Makanan>ambilMakanan(){
+        list.clear();
         try{
         Connection conn = Database.getConnection();
         String query = """
@@ -68,8 +69,8 @@ public class CRUD  {
                        JOIN kota AS k ON m.id_kota = k.id_kota;
                        """;
              Statement st = conn.createStatement();
-             ResultSet rsm = st.executeQuery(query);
-             result(rsm);
+             ResultSet rs = st.executeQuery(query);
+            result(rs);
             
              System.out.println("makanan yang diambil "+ banyak.size());
             
@@ -79,6 +80,7 @@ public class CRUD  {
         }
     
  public List <Makanan> filterMakanan(String filter){
+     list.clear();
  try{
      Connection conn = Database.getConnection();
      String query =  """
@@ -101,8 +103,8 @@ public class CRUD  {
                      """;
      PreparedStatement ps = conn.prepareStatement(query);
      ps.setString(1, filter);
-     ResultSet rsm = ps.executeQuery();
-     result(rsm);
+     ResultSet rs = ps.executeQuery();
+     result(rs);
      
      System.out.println("filter "+filter);
      System.out.println("Makanan yang di lolos filter "+ banyak.size());

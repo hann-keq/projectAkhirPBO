@@ -77,10 +77,21 @@
                   <Font size="32.0" />
                </font>
             </Label>
-            <JFXButton graphicTextGap="20.0" layoutX="1553.0" layoutY="34.0" lineSpacing="10.0" prefHeight="46.0" prefWidth="115.0" text="Cart">
-               <graphic>
-                  <FontAwesomeIcon glyphName="SHOPPING_CART" size="2em" />
-               </graphic></JFXButton>
+            <Group layoutX="1549.9000244140625" layoutY="30.899999618530273">
+               <children>
+                  <JFXButton buttonType="RAISED" graphicTextGap="20.0" layoutX="4.0999755859375" layoutY="3.1000003814697266" lineSpacing="10.0" prefHeight="46.0" prefWidth="115.0" stylesheets="@fonts/style.css" text="Cart">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="SHOPPING_CART" size="2em" />
+                     </graphic>
+                  </JFXButton>
+                  <Group fx:id="groupCounter" layoutX="50.0" layoutY="7.0" visible="false">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="13.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                        <Label fx:id="lblCounter" alignment="CENTER" layoutX="-5.0" layoutY="-13.0" text="1" />
+                     </children>
+                  </Group>
+               </children>
+            </Group>
             <JFXToggleNode layoutX="277.0" layoutY="46.0" selected="true" styleClass="jfx-toggle-button" stylesheets="@fonts/style.css" text="Jelajahi">
                <toggleGroup>
                   <ToggleGroup fx:id="menu" />

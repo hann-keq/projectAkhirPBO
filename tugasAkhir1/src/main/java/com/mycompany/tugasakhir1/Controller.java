@@ -209,6 +209,7 @@ profilKonsumen user = cari.Login(email, username, password);
 if(user != null ){
     int idKonsumenLogin = user.getIdUser();
     sesiAktif.setIdKonsumen(idKonsumenLogin);
+    AlertAlert.AlertTemplate(AlertType.INFORMATION,"login berhasil",ButtonType.OK,1000);
     FXMLLoader loader = new FXMLLoader (
             getClass().getResource("/com/mycompany/tugasAkhir1/Home.fxml"));
             Parent root = loader.load();
