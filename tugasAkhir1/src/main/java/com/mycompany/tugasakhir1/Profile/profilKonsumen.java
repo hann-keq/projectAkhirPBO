@@ -9,30 +9,41 @@ package com.mycompany.tugasakhir1.Profile;
  * @author hanif
  */
 public class profilKonsumen {
-    private  String namaKonsumen,email,alamat;
+    private  String namaKonsumen,email,alamat,path;
     private long noTelp;
-    private int id;
+    private int id,output;
     
-   public void setNamaKonsumen(String namaKonsumen){
+    public void setOutput(int output){
+    this.output = output;
+    }
+    public int getOutput(){
+        return output;
+    }
+   public void setNama(String namaKonsumen){
     this.namaKonsumen = namaKonsumen;
    }
-   public void setEmailKonsumen (String email){
+   public void setEmail (String email){
     this.email = email;
    }
-   public void setAlamatKonsumen(String alamat){
+   public void setAlamat(String alamat){
     this.alamat = alamat;
    }
-   
+   public void setPathProfile(String path){
+   this.path = path;
+   }
+   public String getPathProfile(){
+   return path;
+   }
    public void setIdUser(int id){
     this.id = id;
    }
-   public void setNoTelpKonsumen(Long noTelp){
+   public void setNoTelp(Long noTelp){
     this.noTelp = noTelp;
             System.out.println("no telp yang dikirim"+noTelp);
             System.out.println(this.noTelp);}
    
     
-    public String getNamaKonsumen(){
+    public String getNama(){
         return namaKonsumen;
     }
     public String getEmail(){

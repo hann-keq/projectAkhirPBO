@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleNode?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="441.0" prefWidth="545.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="com.mycompany.tugasakhir1.AdminController.ScanBarcodeController">
+   <children>
+      <StackPane alignment="CENTER_LEFT">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2a7700" height="79.0" stroke="#ffffff00" strokeType="INSIDE" width="545.0" />
+            <Label prefHeight="25.0" prefWidth="166.0" text="Verifikasi Kode Pesanan" textFill="WHITE">
+               <StackPane.margin>
+                  <Insets left="13.0" />
+               </StackPane.margin>
+            </Label>
+         </children>
+      </StackPane>
+      <HBox layoutX="70.0" layoutY="138.0">
+         <children>
+            <JFXToggleNode fx:id="btnScan" prefHeight="36.0" prefWidth="123.0" styleClass="button" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" text="Scan QR">
+               <HBox.margin>
+                  <Insets right="80.0" />
+               </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="scan" />
+               </toggleGroup>
+            </JFXToggleNode>
+            <JFXToggleNode fx:id="btnManual" prefHeight="37.0" prefWidth="123.0" selected="true" styleClass="button" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" text="Input Manual" toggleGroup="$scan">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </JFXToggleNode>
+         </children>
+      </HBox>
+      <Group fx:id="grpManual" layoutX="70.0" layoutY="230.0">
+         <children>
+            <TextField fx:id="txtKode" layoutY="26.0" prefHeight="43.0" prefWidth="406.0" promptText="id pesanan" />
+            <JFXButton fx:id="btnKonfirmasi" layoutX="2.0" layoutY="95.0" prefHeight="51.0" prefWidth="406.0" style="-fx-background-color: #2A7700;" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" text="Konfirmasi" textFill="WHITE" />
+            <Label text="Kode pesanan" />
+         </children>
+      </Group>
+      <ImageView fx:id="imageCam" fitHeight="163.0" fitWidth="406.0" layoutX="71.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+   </children>
+</AnchorPane>

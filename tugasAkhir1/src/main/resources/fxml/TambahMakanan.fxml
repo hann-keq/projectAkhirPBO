@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="813.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.AdminController.TambahMakananController">
+   <children>
+      <VBox layoutX="44.0" layoutY="442.0">
+         <children>
+            <Label text="Nama" />
+            <TextField fx:id="txtNama" prefHeight="25.0" prefWidth="593.0" />
+         </children>
+      </VBox>
+      <HBox layoutX="42.0" layoutY="506.0">
+         <children>
+            <VBox prefWidth="276.0">
+               <children>
+                  <Label text="Stok" />
+                  <TextField fx:id="txtStok" />
+               </children>
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefWidth="276.0">
+               <children>
+                  <Label text="Harga" />
+                  <TextField fx:id="txtHarga" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox layoutX="42.0" layoutY="630.0" prefHeight="42.0" prefWidth="593.0">
+         <children>
+            <Label text="Satuan berat makanan" />
+            <JFXComboBox fx:id="cbBerat" prefHeight="25.0" prefWidth="593.0" promptText="Satuan berat makanan" style="-fx-border-color: #aeaeae;" visibleRowCount="4" />
+         </children>
+      </VBox>
+      <VBox layoutX="44.0" layoutY="383.0">
+         <children>
+            <Label text="Jenis Makanan" />
+            <JFXComboBox fx:id="cbJenisMakanan" prefHeight="25.0" prefWidth="593.0" promptText="Pilih jenis makanan" style="-fx-border-color: #aeaeae;" visibleRowCount="4" />
+         </children>
+      </VBox>
+      <VBox layoutX="42.0" layoutY="563.0">
+         <children>
+            <Label text="Experied" />
+            <JFXComboBox fx:id="cbExperied" prefHeight="25.0" prefWidth="593.0" promptText="jangka waktu makanan sebelum experied" style="-fx-border-color: #aeaeae;" visibleRowCount="4" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" layoutX="42.0" layoutY="759.0" prefHeight="37.0" prefWidth="592.0">
+         <children>
+            <JFXButton fx:id="btnBatal" prefHeight="25.0" prefWidth="172.0" style="-fx-border-color: #aeaeae; -fx-background-radius: 10; -fx-border-radius: 5;" text="Batal">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnTambahkan" buttonType="RAISED" prefWidth="172.0" style="-fx-background-color: #39A300;" text="Tambahkan" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <Label layoutX="39.0" layoutY="36.0" text="Tambah Makanan">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="80.0" text="Masukan detail detail produk anda" />
+      <Group layoutX="43.0" layoutY="135.0">
+         <children>
+            <Rectangle fx:id="editMakanan" arcHeight="5.0" arcWidth="5.0" fill="#f8f8f8" height="212.0" layoutX="3.0" layoutY="2.0" stroke="#aeaeae" strokeDashOffset="10.0" strokeMiterLimit="3.0" strokeType="OUTSIDE" strokeWidth="3.0" style="-fx-stroke-dash-array: 10;" width="587.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Rectangle>
+            <Label fx:id="lblKeterangan2" layoutX="212.5" layoutY="125.0" text="Klik untuk menambahkan foto" textFill="#797777">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="lblKeterangan" layoutX="203.0" layoutY="146.0" text="Format yang didukung JPEG,PNG " textFill="#7c7c7c">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <StackPane layoutX="203.5" layoutY="6.0" prefHeight="181.0" prefWidth="180.0">
+               <children>
+                  <FontAwesomeIcon fill="#00000066" glyphName="UPLOAD" size="5em" text="" wrappingWidth="55.14285755157471">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <Rectangle fx:id="Gambar" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="151.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="150.0" />
+               </children>
+            </StackPane>
+            <Label fx:id="path" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="186.0" prefHeight="17.0" prefWidth="584.0" text="Label" visible="false" />
+         </children>
+      </Group>
+      <JFXComboBox fx:id="cbMakananMinuman" layoutX="42.0" layoutY="714.0" prefHeight="25.0" prefWidth="593.0" style="-fx-border-color: #aeaeae;" />
+      <Label layoutX="44.0" layoutY="697.0" text="Jenis makanan" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" snapToPixel="false" stylesheets="@../../../Downloads/fonts/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.cartController.EmptyCartController">
+   <children>
+      <Group>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="1922.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.018957345971563955" startX="1.0" startY="0.014218009478672985">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.2549019753932953" green="0.729411780834198" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.22050000727176666" green="0.6299999952316284" opacity="0.20999999344348907" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Text fx:id="titleColored" layoutX="149.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FoodCycle">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Label fx:id="topMenu" layoutX="366.0" layoutY="34.0" text="Jelajahi">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="topMenu" layoutX="483.0" layoutY="34.0" text="Pesanan Saya">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="57.0" layoutX="1504.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" style="-fx-blend-mode: #D9D9D9;">
+               <image>
+                  <Image url="@../../../Downloads/1170678-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Circle fill="DODGERBLUE" layoutX="1655.0" layoutY="50.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #D9D9D9;" />
+         </children>
+      </Group>
+      <AnchorPane layoutX="484.0" layoutY="225.0" prefHeight="582.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Label layoutX="340.0" layoutY="216.0" text="Keranjang Kosong">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="135.0" layoutY="276.0" text="Mulai selamatkan makanan lezat dan kurangi food waste hari ini!">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Group layoutX="450.0" layoutY="150.0">
+               <children>
+                  <Circle fill="DODGERBLUE" radius="51.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #D9D9D9;" />
+                  <FontAwesomeIcon glyphName="SHOPPING_CART" layoutX="-31.0" layoutY="20.571426391601562" size="5em" wrappingWidth="64.0" />
+               </children>
+            </Group>
+            <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="389.0" layoutY="342.0" prefHeight="40.0" prefWidth="129.0" style="-fx-background-color: #3CAC00;" text="Kembali ke toko" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -33,15 +33,17 @@
     -fx-font-family:"Inter-Bold";
     -fx-font-size:24;
     -fx-font-weight:bold;
-    
+}
+.labelRincian{
+     -fx-font-family:"Inter-Bold";
+    -fx-font-size:20;
+    -fx-font-weight:bold;
 }
 
 .buttonProfile{
     -fx-background-radius:100;
     -fx-padding:0;
-   
-    
-}
+ }
 
 .button,.button:focused{
     -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
@@ -102,6 +104,8 @@
     -fx-background-color:transparent;
     -fx-border-color:transparent;
     -fx-text-fill:#40b800;
+    
+    
 }
 
 

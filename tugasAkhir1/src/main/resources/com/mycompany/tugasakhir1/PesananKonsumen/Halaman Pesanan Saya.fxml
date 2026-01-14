@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleNode?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" snapToPixel="false" stylesheets="@../../../Downloads/fonts/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.RincianPesananController">
+   <children>
+      <Label layoutX="153.0" layoutY="229.0" text="Pesanan Saya">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="155.0" layoutY="277.0" text="Kelola Pesanan ">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <JFXToggleNode fx:id="tgglAktif" layoutX="163.0" layoutY="354.0" prefHeight="25.0" prefWidth="108.0" selected="true" styleClass="button" stylesheets="@../fonts/style.css" text="Aktif">
+         <toggleGroup>
+            <ToggleGroup fx:id="selector" />
+         </toggleGroup></JFXToggleNode>
+      <JFXToggleNode fx:id="tgglSelesai" layoutX="436.0" layoutY="354.0" prefHeight="25.0" prefWidth="108.0" styleClass="button" stylesheets="@../fonts/style.css" text="Selesai" toggleGroup="$selector" />
+      <VBox layoutX="209.0" layoutY="380.0" prefHeight="718.0" prefWidth="1502.0">
+         <children>
+            <ScrollPane prefHeight="674.0" prefWidth="1502.0" styleClass="scrollPane" stylesheets="@../fonts/style.css">
+               <VBox.margin>
+                  <Insets top="19.0" />
+               </VBox.margin>
+               <content>
+                  <FlowPane fx:id="flowRincian" prefHeight="329.0" prefWidth="1501.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <Group layoutX="-1.0" layoutY="-2.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#38a10026" height="103.0" stroke="WHITE" strokeType="INSIDE" styleClass="rectangle" width="1924.0" />
+            <Label fx:id="titleColored" layoutX="42.0" layoutY="28.0" stylesheets="@../fonts/style.css" text="FoodCycle" textFill="#44c300">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Group layoutX="1549.9000244140625" layoutY="30.899999618530273">
+               <children>
+                  <JFXButton fx:id="btnKeranjang" buttonType="RAISED" graphicTextGap="20.0" layoutX="4.0999755859375" layoutY="3.1000003814697266" lineSpacing="10.0" prefHeight="46.0" prefWidth="115.0" stylesheets="@../fonts/style.css" text="Cart">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="SHOPPING_CART" size="2em" />
+                     </graphic>
+                  </JFXButton>
+                  <Group fx:id="groupCounter" layoutX="50.0" layoutY="7.0" visible="false">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="13.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                        <Label fx:id="lblCounter" alignment="CENTER" layoutX="-5.0" layoutY="-13.0" text="1" />
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <JFXToggleNode fx:id="btnJelajahi" layoutX="277.0" layoutY="46.0" styleClass="jfx-toggle-button" stylesheets="@../fonts/style.css" text="Jelajahi">
+               <toggleGroup>
+                  <ToggleGroup fx:id="menu" />
+               </toggleGroup>
+               <selectedColor>
+                  <Color opacity="0.0" />
+               </selectedColor>
+            </JFXToggleNode>
+            <JFXToggleNode layoutX="370.0" layoutY="46.0" selected="true" stylesheets="@../fonts/style.css" text="Pesanan Saya" toggleGroup="$menu">
+               <selectedColor>
+                  <Color opacity="0.0" />
+               </selectedColor>
+               <styleClass>
+                  <String fx:value="jfx-rippler" />
+                  <String fx:value="jfx-toggle-button" />
+               </styleClass>
+            </JFXToggleNode>
+            <Circle fx:id="profil" fill="DODGERBLUE" layoutX="1732.0" layoutY="54.0" onMouseClicked="#showProfile" radius="33.0" stroke="#d3d3d3" strokeType="INSIDE" />
+         </children>
+      </Group>
+      <StackPane fx:id="stackKosong" layoutX="88.0" layoutY="402.0" prefHeight="678.0" prefWidth="1734.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8e8e8" height="758.0" stroke="WHITE" strokeType="INSIDE" width="1724.0" />
+            <Label text="Keranjang anda masih kosong  :( ">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets bottom="105.0" />
+               </StackPane.margin>
+            </Label>
+            <JFXButton fx:id="btnKembali" prefHeight="45.0" prefWidth="215.0" stylesheets="@../fonts/style.css" text="Kembali ke menu utama">
+               <StackPane.margin>
+                  <Insets top="48.0" />
+               </StackPane.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </StackPane>
+      <JFXToggleNode fx:id="tgglDiterima" layoutX="300.0" layoutY="354.0" prefHeight="25.0" prefWidth="108.0" styleClass="button" stylesheets="@../fonts/style.css" text="diterima" toggleGroup="$selector" />
+   </children>
+</AnchorPane>

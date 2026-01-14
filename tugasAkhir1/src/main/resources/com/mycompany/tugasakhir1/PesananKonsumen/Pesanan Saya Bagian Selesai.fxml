@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<FlowPane fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="1502.0" style="-fx-border-radius: 20; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.cardRiwayatPesananController">
+   <children>
+      <VBox>
+         <children>
+            <HBox prefHeight="198.0" prefWidth="319.0" style="-fx-border-radius: 20;">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="125.0" stroke="BLACK" strokeType="INSIDE" width="125.0">
+                     <HBox.margin>
+                        <Insets left="35.0" top="39.0" />
+                     </HBox.margin>
+                  </Rectangle>
+                  <VBox prefHeight="198.0" prefWidth="458.0">
+                     <HBox.margin>
+                        <Insets left="24.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label fx:id="lblNama" prefHeight="17.0" prefWidth="149.0" text="Nasi Goreng">
+                           <VBox.margin>
+                              <Insets top="21.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="lblNoPesanan" text="Pesanan">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Waktu pengambilan">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="lblHari" text="HAri">
+                           <VBox.margin>
+                              <Insets top="4.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="lblWaktu" text="jam">
+                           <VBox.margin>
+                              <Insets top="6.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="lblHarga" text="hatga">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="198.0" prefWidth="264.0">
+                     <children>
+                        <Label text="Lokasi">
+                           <VBox.margin>
+                              <Insets top="43.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="lblLokasi" text="loaksi asli">
+                           <VBox.margin>
+                              <Insets top="4.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="198.0" prefWidth="172.0">
+                     <children>
+                        <Label text="Pembelian">
+                           <VBox.margin>
+                              <Insets top="41.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="lblJumlah" text="Label">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_RIGHT" prefHeight="198.0" prefWidth="409.0">
+                     <children>
+                        <StackPane alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="619.0">
+                           <children>
+                              <Group>
+                                 <children>
+                                    <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#44c300" height="35.0" stroke="WHITE" strokeType="INSIDE" width="200.0" />
+                                    <Label fx:id="lblStatus" alignment="CENTER" layoutX="21.0" layoutY="9.0" prefHeight="17.0" prefWidth="156.0" text="Label" />
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets right="25.0" top="11.0" />
+                                 </StackPane.margin>
+                              </Group>
+                           </children>
+                        </StackPane>
+                        <JFXButton fx:id="btnDetail" buttonType="RAISED" text="Lihat Detail --&gt;">
+                           <VBox.margin>
+                              <Insets right="85.0" top="62.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="67.0" prefWidth="1499.0">
+               <children>
+                  <StackPane>
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#afcd79" height="77.0" stroke="#ffffff00" strokeType="INSIDE" width="1502.0" />
+                        <Label text="Terima Kasih telah membantu mengurangi food waste!" />
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</FlowPane>

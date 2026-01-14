@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -37,30 +39,15 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <Text layoutX="736.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lokasi yang populer oleh pengguna" />
       <Ellipse fx:id="cobaLingkaranBlur1" fill="#44c200b5" layoutX="1920.0" layoutY="45.0" radiusX="437.0" radiusY="722.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" />
       <Ellipse fx:id="cobaLingkaranBlur" fill="#44c3009c" layoutX="43.0" layoutY="1376.0" radiusX="437.0" radiusY="722.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" />
-      <TextField layoutX="731.0" layoutY="421.0" prefHeight="35.0" prefWidth="458.0" promptText="Cari lokasi disini" styleClass="textField" stylesheets="@fonts/style.css" />
       <JFXButton fx:id="btnNext" buttonType="RAISED" layoutX="749.0" layoutY="827.0" prefHeight="46.0" prefWidth="435.0" style="-fx-background-color: #2A7700; -fx-border-radius: 30; -fx-background-radius: 30;" text="Tekan untuk melanjutkan" textFill="WHITE" />
-      <JFXButton fx:id="btnLocation" buttonType="RAISED" graphicTextGap="15.0" layoutX="772.0" layoutY="525.0" prefHeight="87.0" prefWidth="181.0" styleClass="btnLocation" text="Purwokerto">
-         <graphic>
-            <FontAwesomeIcon glyphName="MAP_MARKER" size="1.5em" />
-         </graphic>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" defaultButton="true" graphicTextGap="15.0" layoutX="772.0" layoutY="650.0" prefHeight="87.0" prefWidth="181.0" styleClass="btnLocation" text="Purwokerto">
-         <graphic>
-            <FontAwesomeIcon glyphName="MAP_MARKER" size="1.5em" />
-         </graphic>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" defaultButton="true" graphicTextGap="15.0" layoutX="1007.0" layoutY="525.0" prefHeight="87.0" prefWidth="181.0" styleClass="btnLocation" text="Purwokerto">
-         <graphic>
-            <FontAwesomeIcon glyphName="MAP_MARKER" size="1.5em" />
-         </graphic>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" defaultButton="true" graphicTextGap="15.0" layoutX="1007.0" layoutY="650.0" prefHeight="87.0" prefWidth="181.0" styleClass="btnLocation" text="Purwokerto">
-         <graphic>
-            <FontAwesomeIcon glyphName="MAP_MARKER" size="1.5em" />
-         </graphic>
-      </JFXButton>
+      <Label fx:id="lblLokasi" layoutX="787.0" layoutY="759.0" text="Lokasi" />
+      <ScrollPane layoutX="749.0" layoutY="503.0" prefHeight="243.0" prefWidth="461.0">
+         <content>
+            <FlowPane fx:id="container" prefHeight="64.0" prefWidth="456.0" />
+         </content>
+      </ScrollPane>
+      <TextField fx:id="txtCari" layoutX="744.0" layoutY="440.0" prefHeight="35.0" prefWidth="467.0" promptText="cari disini" />
    </children>
 </AnchorPane>

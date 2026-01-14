@@ -53,7 +53,7 @@
             </LinearGradient>
          </fill>
       </Ellipse>
-      <Button disable="true" layoutX="622.0" layoutY="441.0" mnemonicParsing="false" onAction="#showLogin" prefHeight="42.0" prefWidth="296.0" style="-fx-border-color: #44C300; -fx-focus-traversable: true;" stylesheets="@fonts/style.css" text="Login">
+      <Button disable="true" layoutX="622.0" layoutY="441.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="296.0" style="-fx-border-color: #44C300; -fx-focus-traversable: true;" stylesheets="@fonts/style.css" text="Login">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
@@ -63,7 +63,7 @@
             <Font name="System Bold" size="52.0" />
          </font>
       </Label>
-      <Button layoutX="978.0" layoutY="440.0" mnemonicParsing="false" onAction="#showSignUp" prefHeight="42.0" prefWidth="296.0" style="-fx-focus-traversable: false;" stylesheets="@fonts/style.css" text="Buat Akun">
+      <Button layoutX="978.0" layoutY="440.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="296.0" style="-fx-focus-traversable: false;" stylesheets="@fonts/style.css" text="Buat Akun">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -97,7 +97,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <JFXButton layoutX="684.0" layoutY="815.0" onAction="#Login" prefHeight="35.0" prefWidth="544.0" style="-fx-background-color: #2A7700; -fx-border-radius: 30; -fx-background-radius: 30;" text="Login" textFill="WHITE" />
+      <JFXButton fx:id="btnLogin" layoutX="684.0" layoutY="815.0" prefHeight="35.0" prefWidth="544.0" style="-fx-background-color: #2A7700; -fx-border-radius: 30; -fx-background-radius: 30;" text="Login" textFill="WHITE" />
       <PasswordField fx:id="txtPassword" layoutX="684.0" layoutY="764.0" prefHeight="35.0" prefWidth="544.0" styleClass="passwordField" stylesheets="@fonts/style.css" />
    </children>
 </AnchorPane>

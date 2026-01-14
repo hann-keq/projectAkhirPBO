@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleNode?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" snapToPixel="false" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.kelolaMakanan.KelolaMakananController">
+   <children>
+      <Group layoutX="-4.0" layoutY="-1.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#38a10026" height="103.0" stroke="WHITE" strokeType="INSIDE" styleClass="rectangle" width="1924.0" />
+            <Label fx:id="titleColored" layoutX="42.0" layoutY="28.0" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" text="FoodCycle" textFill="#44c300">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Group layoutX="1549.9000244140625" layoutY="30.899999618530273">
+               <children>
+                  <JFXButton buttonType="RAISED" graphicTextGap="20.0" layoutX="4.0999755859375" layoutY="3.1000003814697266" lineSpacing="10.0" prefHeight="46.0" prefWidth="115.0" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" text="Cart">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="SHOPPING_CART" size="2em" />
+                     </graphic>
+                  </JFXButton>
+                  <Group fx:id="groupCounter" layoutX="50.0" layoutY="7.0" visible="false">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="13.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                        <Label fx:id="lblCounter" alignment="CENTER" layoutX="-5.0" layoutY="-13.0" text="1" />
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <JFXToggleNode fx:id="btnDashboard" layoutX="277.0" layoutY="46.0" styleClass="jfx-toggle-button" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" text="Dashboard">
+               <toggleGroup>
+                  <ToggleGroup fx:id="menu" />
+               </toggleGroup>
+               <selectedColor>
+                  <Color opacity="0.0" />
+               </selectedColor>
+            </JFXToggleNode>
+            <JFXToggleNode layoutX="370.0" layoutY="46.0" selected="true" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" text="Pengelola makanan" toggleGroup="$menu">
+               <selectedColor>
+                  <Color opacity="0.0" />
+               </selectedColor>
+               <styleClass>
+                  <String fx:value="jfx-rippler" />
+                  <String fx:value="jfx-toggle-button" />
+               </styleClass>
+            </JFXToggleNode>
+            <Circle fx:id="goToProfile" fill="DODGERBLUE" layoutX="1732.0" layoutY="54.0" radius="33.0" stroke="#d3d3d3" strokeType="INSIDE" />
+         </children>
+      </Group>
+      <JFXTreeTableView fx:id="table" layoutX="141.0" layoutY="259.0" prefHeight="790.0" prefWidth="1642.0">
+         <columns>
+            <TreeTableColumn fx:id="colNama" prefWidth="588.0" text="Nama Makanan" />
+            <TreeTableColumn fx:id="colKategori" minWidth="0.0" prefWidth="242.33" text="Kategori" />
+            <TreeTableColumn fx:id="colHarga" prefWidth="242.33" text="Harga" />
+            <TreeTableColumn fx:id="colStok" minWidth="0.0" prefWidth="242.33" text="Stok" />
+            <TreeTableColumn fx:id="colEdit" prefWidth="327.0" text="Edit dan Hapus" />
+         </columns>
+      </JFXTreeTableView>
+      <JFXButton fx:id="btnTambah" layoutX="1585.0" layoutY="196.0" prefHeight="35.0" prefWidth="195.0" text="Tambah makanan" />
+   </children>
+</AnchorPane>

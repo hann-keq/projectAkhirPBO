@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleNode?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" snapToPixel="false" stylesheets="@fonts/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.Profile.profileController">
    <children>
@@ -47,14 +47,13 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Label>
-                              <JFXButton text="Button">
+                              <JFXButton fx:id="btnEdit" text="edit profil">
                                  <VBox.margin>
                                     <Insets left="5.0" />
                                  </VBox.margin>
                               </JFXButton>
                            </children>
                         </VBox>
-                        <Circle fx:id="myprofile" fill="DODGERBLUE" layoutX="1048.0" layoutY="84.0" radius="77.0" stroke="TRANSPARENT" strokeType="INSIDE" />
                      </children>
                   </Group>
                   <Group>
@@ -117,8 +116,8 @@
                         <Rectangle arcHeight="30" arcWidth="30" fill="WHITE" height="257.0" layoutY="17.0" stroke="#a1a1a100" strokeType="INSIDE" width="1332.0" />
                         <Rectangle arcHeight="30" arcWidth="30" fill="#38a10042" height="93.0" layoutY="18.0" stroke="#44c20080" strokeType="INSIDE" width="1332.0" />
                         <Label layoutX="37.0" layoutY="51.0" text="Pembayaran &amp; Pengaturan" />
-                        <JFXButton layoutX="1.0" layoutY="111.0" prefHeight="79.0" prefWidth="1329.0" style="-fx-background-radius: 15;" text="Bantuan &amp; dukungan" />
-                        <JFXButton layoutX="2.0" layoutY="191.0" prefHeight="79.0" prefWidth="1329.0" style="-fx-background-radius: 15;" text="Keluar" />
+                        <JFXButton fx:id="btnAdmin" layoutX="1.0" layoutY="111.0" prefHeight="79.0" prefWidth="1329.0" style="-fx-background-radius: 15;" text="Pergi ke toko" />
+                        <JFXButton fx:id="btnKeluar" layoutX="2.0" layoutY="191.0" prefHeight="79.0" prefWidth="1329.0" style="-fx-background-radius: 15;" text="Keluar" />
                      </children>
                   </Group>
                </children>
@@ -128,45 +127,33 @@
             </VBox>
          </content>
       </ScrollPane>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="103.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="1922.0">
-         <fill>
-            <LinearGradient endX="1.0" endY="0.018957345971563955" startX="1.0" startY="0.014218009478672985">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.2549019753932953" green="0.729411780834198" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.22050000727176666" green="0.6299999952316284" opacity="0.20999999344348907" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </fill>
-      </Rectangle>
       <Group layoutX="198.0" layoutY="91.0" />
-      <Text fx:id="titleColored" layoutX="149.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FoodCycle">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#38a10026" height="103.0" layoutX="-1.0" layoutY="-1.0" stroke="WHITE" strokeType="INSIDE" styleClass="rectangle" width="1924.0" />
+      <Circle fx:id="profile" fill="DODGERBLUE" layoutX="1707.0" layoutY="52.0" radius="33.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Label fx:id="titleColored" layoutX="41.0" layoutY="27.0" stylesheets="@fonts/style.css" text="FoodCycle" textFill="#44c300">
          <font>
             <Font size="32.0" />
          </font>
-      </Text>
-      <Label fx:id="topMenu" layoutX="366.0" layoutY="34.0" text="Jelajahi">
-         <font>
-            <Font size="24.0" />
-         </font>
       </Label>
-      <Label fx:id="topMenu" layoutX="483.0" layoutY="34.0" text="Pesanan Saya">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <JFXButton layoutX="1570.0" layoutY="30.0" prefHeight="40.0" prefWidth="59.0" styleClass="jfx-toggle-button" stylesheets="@fonts/style.css" text=" ">
-         <graphic>
-            <FontAwesomeIcon glyphName="CART_PLUS" size="3em" />
-         </graphic>
-      </JFXButton>
-      <Circle fx:id="profile" fill="DODGERBLUE" layoutX="1707.0" layoutY="52.0" radius="33.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <JFXToggleNode fx:id="btnjelajahi" layoutX="276.0" layoutY="45.0" selected="true" styleClass="jfx-toggle-button" stylesheets="@fonts/style.css" text="Jelajahi">
+         <toggleGroup>
+            <ToggleGroup fx:id="menu" />
+         </toggleGroup>
+         <selectedColor>
+            <Color opacity="0.0" />
+         </selectedColor>
+      </JFXToggleNode>
+      <JFXToggleNode fx:id="btnPesanan" layoutX="369.0" layoutY="45.0" stylesheets="@fonts/style.css" text="Pesanan Saya">
+         <toggleGroup>
+            <ToggleGroup fx:id="menu" />
+         </toggleGroup>
+         <selectedColor>
+            <Color opacity="0.0" />
+         </selectedColor>
+         <styleClass>
+            <String fx:value="jfx-rippler" />
+            <String fx:value="jfx-toggle-button" />
+         </styleClass>
+      </JFXToggleNode>
    </children>
 </AnchorPane>

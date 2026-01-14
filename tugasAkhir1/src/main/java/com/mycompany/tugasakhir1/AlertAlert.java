@@ -32,6 +32,7 @@ public class AlertAlert {
     }
     public static void AlertTemplate(AlertType type,String message){
         AlertTemplate(type,message,ButtonType.OK);
+        
     }
     public static void AlertTemplate(String message,ButtonType button){
         AlertTemplate(AlertType.WARNING,message,button);

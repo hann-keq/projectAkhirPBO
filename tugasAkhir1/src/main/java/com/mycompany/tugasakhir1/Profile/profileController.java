@@ -1,8 +1,13 @@
 package com.mycompany.tugasakhir1.Profile;
 
-import com.mycompany.tugasakhir1.CRUD;
+import com.jfoenix.controls.JFXToggleButton;
+import com.jfoenix.controls.JFXToggleNode;
+import com.mycompany.tugasakhir1.DaoKonsumen;
 import com.mycompany.tugasakhir1.Controller;
+import com.mycompany.tugasakhir1.SceneChanger;
+import com.mycompany.tugasakhir1.imageControll;
 import com.mycompany.tugasakhir1.sesiAktif;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -16,9 +21,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
@@ -33,93 +40,91 @@ import javafx.scene.shape.Circle;
  * @author hanif
  */
 public class profileController implements Initializable {
-    private CRUD crud;
+    private DaoKonsumen crud;
     private int idKonsumen;
-   
-    @FXML private Circle profile,myprofile;
-    @FXML 
-    private Label lblNama,lblEmail,lblEmail1,lblTelepon,lblAlamat;
+    @FXML private Button btnAdmin,btnKeluar,btnEdit;
+    @FXML private Circle profile,profile1;
+    @FXML private JFXToggleNode btnjelajahi,btnPesanan;
+   @FXML private Label lblNama,lblEmail,lblEmail1,lblTelepon,lblAlamat;
    
  
    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       
-
+    btnAdmin.setOnAction(this::showLoginAdmin);
+    btnKeluar.setOnAction(this::showLogin);
+    btnEdit.setOnAction(eh ->{
+        SceneChanger.StageChanger("/Edit Profil.fxml","Edit profil");});
+btnPesanan.setOnAction(eh ->{
+   SceneChanger.pindahScene("/com/mycompany/tugasakhir1/PesananKonsumen/Halaman Pesanan Saya.fxml", eh);});
+btnjelajahi.setOnAction(eh ->{
+        SceneChanger.pindahScene("/com/mycompany/tugasakhir1/Home.fxml", eh);});
     
     loadData();
     
-    Image originalImg = new Image(getClass().getResourceAsStream("/com/mycompany/tugasakhir1/fonts/profile.png"));
-
-        // 2. Potong bagian tengah agar menjadi kotak (1:1)
-        Image squareImg = getSquareImage(originalImg);
-
-        // 3. Masukkan ke lingkaran
-        myprofile.setFill(new ImagePattern(squareImg));
+      try{
+    FileInputStream input = new FileInputStream(sesiAktif.getInstance().getPathFile());
+    Image originial = new Image(input);
+    
+    imageControll square = new imageControll();
+    Image squareImg = square.getSquareImage(originial);
+    
+    profile.setFill(new ImagePattern(squareImg));
+    profile1.setFill(new ImagePattern(squareImg));
+    }catch(Exception e){
+    e.printStackTrace();
+    }
+        
     }
     
-    public Image getSquareImage(Image img) {
-        double width = img.getWidth();
-        double height = img.getHeight();
-        
-        // Tentukan dimensi kotak (ambil sisi terpendek)
-        double side = Math.min(width, height);
-
-        // Hitung posisi koordinat X dan Y agar potongannya tepat di tengah
-        double x = (width - side) / 2;
-        double y = (height - side) / 2;
-
-        // Gunakan ImageView bantuan untuk memotong (cropping)
-        ImageView imageView = new ImageView(img);
-        Rectangle2D viewportRect = new Rectangle2D(x, y, side, side);
-        imageView.setViewport(viewportRect);
-
-        // Ambil snapshot dari hasil crop tersebut
-        SnapshotParameters params = new SnapshotParameters();
-        params.setFill(Color.TRANSPARENT); 
-        
-        return imageView.snapshot(params, null);
-    }
+    
     private void loadData(){
     profil();
-    loadImage();
+    
     }
-    private void loadImage(){
-        Image im = new Image(getClass().getResourceAsStream("/com/mycompany/tugasakhir1/fonts/profile.png"));
-        ImageView iv = new ImageView(im);
-        iv.setPreserveRatio(false);
-        iv.setSmooth(true);
-      
-        
-    SnapshotParameters sp = new SnapshotParameters();
-    sp.setFill(Color.BLUEVIOLET);
     
-    Image snapshot = iv.snapshot(sp, null);
-    profile.setFill(new ImagePattern(snapshot));
-  
     
+    ///////////////////////
+
+    @FXML
+    private void showLoginAdmin(ActionEvent event) {
+        try{
+        FXMLLoader loader = new FXMLLoader (
+            getClass().getResource("/fxml/LoginAdmin.fxml"));
+            Parent root = loader.load();
+            Scene scene = ((Node) event.getSource()).getScene();
+            scene.setRoot(root);
+        }catch(Exception e){
+            e.printStackTrace();
+        }   
     }
     private void profil(){
-         crud = new CRUD();
-        int id = sesiAktif.getIdKonsumen();
+         crud = new DaoKonsumen();
+        int id = sesiAktif.getInstance().getIdKonsumen();
          profilKonsumen user = crud.Profile(id);
         if(user != null){
-            lblNama.setText(user.getNamaKonsumen());
+            lblNama.setText(user.getNama());
             lblEmail.setText(user.getEmail());
             lblTelepon.setText(String.valueOf(user.getNoTelp()));
+            lblAlamat.setText(user.getAlamat());
+              lblEmail1.setText(user.getEmail());
+            
     }
     }
         
      @FXML
-    private void showLogin(ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(
+    private void showLogin(ActionEvent event) {
+       try{
+           FXMLLoader loader = new FXMLLoader(
         getClass().getResource("/com/mycompany/tugasAkhir1/login.fxml"));
         
         Parent root = loader.load();
         Scene scene = ((Node) event.getSource()).getScene();
         
         scene.setRoot(root);
-        
+       }catch(Exception e){
+       e.printStackTrace();
+       }
 }
 
     

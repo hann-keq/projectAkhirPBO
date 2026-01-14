@@ -17,23 +17,74 @@
 </repositories>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/de.jensd/fontawesomefx -->
+          
+   <dependency>
+    <groupId>com.google.zxing</groupId>
+    <artifactId>core</artifactId>
+    <version>3.5.3</version>
+</dependency>
+<dependency>
+    <groupId>net.sf.jasperreports</groupId>
+    <artifactId>jasperreports</artifactId>
+    <version>6.20.0</version>
+</dependency>
+
+<dependency>
+    <groupId>net.sf.jasperreports</groupId>
+    <artifactId>jasperreports-functions</artifactId>
+    <version>6.20.0</version>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-collections4</artifactId>
+    <version>4.4</version>
+</dependency>
+<dependency>
+        <groupId>com.google.zxing</groupId>
+        <artifactId>javase</artifactId>
+        <version>3.5.3</version>
+    </dependency>
+<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-web -->
+        
+<dependency>
+    <groupId>com.github.sarxos</groupId>
+    <artifactId>webcam-capture</artifactId>
+    <version>0.3.12</version>
+    <type>jar</type>
+</dependency>
+            <dependency>
+    <groupId>org.openjfx</groupId>
+    <artifactId>javafx-web</artifactId>
+    <version>26-ea+21</version>
+</dependency><!-- https://mvnrepository.com/artifact/de.jensd/fontawesomefx -->
+        
+<dependency>
+        <groupId>com.maxmind.geoip2</groupId>
+        <artifactId>geoip2</artifactId>
+        <version>5.0.2</version>
+    </dependency>
+     <!-- https://mvnrepository.com/artifact/com.gluonhq/charm-glisten -->
 <dependency>
     <groupId>de.jensd</groupId>
     <artifactId>fontawesomefx</artifactId>
     <version>8.2</version>
-</dependency>
-     <!-- https://mvnrepository.com/artifact/com.gluonhq/charm-glisten -->
-<dependency>
+</dependency><dependency>
     <groupId>com.gluonhq</groupId>
     <artifactId>charm-glisten</artifactId>
     <version>6.2.3</version>
 </dependency>
+
+   <!-- https://mvnrepository.com/artifact/com.gluonhq/charm-glisten-desktop -->
 <dependency>
     <groupId>com.gluonhq.attach</groupId>
     <artifactId>util</artifactId>
     <version>4.0.17</version> 
-    </dependency>
+    </dependency><dependency>
+    <groupId>com.gluonhq</groupId>
+    <artifactId>charm-glisten-desktop</artifactId>
+    <version>1.0.0</version>
+</dependency>
 <dependency>
     <groupId>com.jfoenix</groupId>
     <artifactId>jfoenix</artifactId>
@@ -82,6 +133,12 @@
     <version>2.0.1</version>
    
 </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>25-ea+21</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

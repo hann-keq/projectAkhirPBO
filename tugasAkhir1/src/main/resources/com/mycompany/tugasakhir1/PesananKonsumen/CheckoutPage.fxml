@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" snapToPixel="false" stylesheets="@fonts/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.pembayaran.PembayaranController">
+   <children>
+      <Group />
+      <Label layoutX="141.0" layoutY="193.0" text="Pembayaran">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="141.0" layoutY="236.0" text="Scan barcode berikut untuk melakukan pembayaran">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#fcfffc78" height="621.0" layoutX="142.0" layoutY="285.0" stroke="#00000039" strokeType="INSIDE" width="1081.0" />
+      <Label fx:id="topMenu" layoutX="167.0" layoutY="316.0" text="Scan barcode untuk membayar">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#ffffff75" height="354.0" layoutX="169.0" layoutY="360.0" stroke="#00000030" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke: grey; -fx-stroke-width: 2; -fx-stroke-dash-array: 10 10;" width="1020.0" />
+      <Label layoutX="178.0" layoutY="737.0" text="Cara Pembayaran:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="181.0" layoutY="773.0" text="1. Buka aplikasi e-wallet atau mobile banking Anda" />
+      <Label layoutX="181.0" layoutY="790.0" text="2. Pilih menu &quot;Scan QR&quot; atau &quot;Bayar&quot;" />
+      <Label layoutX="181.0" layoutY="807.0" text="3. Scan barcode di atas atau masukkan nomor secara manual" />
+      <Label layoutX="183.0" layoutY="824.0" text="4. Konfirmasi pembayaran sejumlah total yang tertera" />
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#1cb5f742" height="119.0" layoutX="169.0" layoutY="729.0" stroke="#00000039" strokeType="INSIDE" width="1024.0" />
+      <VBox layoutX="169.0" layoutY="856.0">
+         <children>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#ff655a42" height="41.0" stroke="#00000039" strokeType="INSIDE" width="1021.0" />
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="168.0" layoutY="868.0" prefHeight="17.0" prefWidth="1021.0" text="Selesaikan Pembayaran dalam 25 menit" textAlignment="CENTER" textFill="#fc0c0c" />
+      <ImageView fitHeight="136.0" fitWidth="290.0" layoutX="509.0" layoutY="448.0" pickOnBounds="true">
+         <image>
+            <Image url="@Screenshot_2026-01-04_225454-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="77.0" layoutX="169.0" layoutY="962.0" pickOnBounds="true" preserveRatio="true" />
+      <Group layoutX="1355.0" layoutY="332.0">
+         <children>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="523.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="375.0" />
+            <VBox maxWidth="370.0" prefHeight="266.0" prefWidth="370.0">
+               <children>
+                  <Label text="Ringkasan Belanja">
+                     <VBox.margin>
+                        <Insets bottom="12.0" left="19.0" top="19.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ScrollPane prefHeight="180.0" prefWidth="371.0">
+                     <VBox.margin>
+                        <Insets left="1.0" />
+                     </VBox.margin>
+                     <content>
+                        <FlowPane fx:id="conRingkasan" prefHeight="200.0" prefWidth="338.0">
+                           <children>
+                              <VBox fx:id="vBox2" prefHeight="185.0" prefWidth="356.0">
+                                 <children>
+                                    <Label fx:id="lblTest" text="Label" />
+                                 </children></VBox>
+                           </children>
+                        </FlowPane>
+                     </content>
+                  </ScrollPane>
+                  <Line endX="270.29290771484375" endY="0.2928932309150696" startX="-100.0">
+                     <VBox.margin>
+                        <Insets top="3.0" />
+                     </VBox.margin>
+                  </Line>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label text="Total">
+                           <HBox.margin>
+                              <Insets right="150.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="lblTotal" alignment="CENTER" text="Label">
+                           <HBox.margin>
+                              <Insets left="130.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Group layoutX="27.0" layoutY="300.0">
+               <children>
+                  <JFXButton fx:id="btnSelesai" prefHeight="35.0" prefWidth="321.0" style="-fx-border-color: #000000; -fx-background-color: #389F00;" text="Selesaikan pembayaran" textFill="WHITE" />
+               </children>
+            </Group>
+            <Group layoutX="35.0" layoutY="377.0">
+               <children>
+                  <Label layoutY="-13.0" prefHeight="58.0" prefWidth="304.0" text="1. Ambil pesanan sesuai waktu yang tertera untuk kesegaran terbaik" textOverrun="CLIP" wrapText="true">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="53.0" text="2. Pembayaran aman dan terlindungi">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+         </children>
+      </Group>
+      <ImageView fx:id="ImageCode" fitHeight="298.0" fitWidth="1005.0" layoutX="175.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#38a10026" height="103.0" layoutX="4.0" layoutY="-1.0" stroke="WHITE" strokeType="INSIDE" styleClass="rectangle" width="1924.0" />
+      <Circle fx:id="profile" fill="DODGERBLUE" layoutX="1712.0" layoutY="52.0" radius="33.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Label fx:id="titleColored" layoutX="46.0" layoutY="27.0" stylesheets="@../fonts/style.css" text="FoodCycle" textFill="#44c300">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnBatal" layoutX="157.0" layoutY="141.0" prefHeight="41.0" prefWidth="127.0" text="Batalkan">
+         <graphic>
+            <FontAwesomeIcon glyphName="ARROW_LEFT" size="2em" wrappingWidth="32.0" />
+         </graphic>
+      </JFXButton>
+      <Label fx:id="lblPath" alignment="CENTER" layoutX="174.0" layoutY="687.0" prefHeight="17.0" prefWidth="1012.0" text="Label" />
+   </children>
+</AnchorPane>

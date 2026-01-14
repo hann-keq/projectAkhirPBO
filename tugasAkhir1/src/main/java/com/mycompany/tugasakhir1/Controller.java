@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.tugasakhir1;
-import com.mycompany.tugasakhir1.CRUD;
+import com.jfoenix.controls.JFXButton;
+import com.mycompany.tugasakhir1.DaoKonsumen;
 import com.mycompany.tugasakhir1.Profile.profilKonsumen;
 import java.io.IOException;
 import java.io.InputStream;
@@ -46,26 +47,45 @@ import javafx.scene.shape.Rectangle;
  *
  * @author hanif
  */
-public class Controller implements Initializable  {
+
+class BaseLogin{
+public abstract static class Login{
+    protected String nama;
+    protected String email;
+    protected String password;
+    protected String username;
+}}
+public class Controller extends BaseLogin.Login implements Initializable  {
     
     @Override
    public void initialize (URL url ,ResourceBundle rb){
    animateControll();
    blurrGauss.blurr(200, 200, cobaLingkaranBlur);
+   setupListener();
+   loadData();
 }
+   
+   private void loadData(){
+   }
+   private void setupListener(){
+       btnLogin.setOnAction(event -> this.Login(event));
+       
+   }
  
  @FXML 
  private Ellipse cobaLingkaranBlur,cobaLingkaranBlur1,LingkaranBlurHome,LingkaranBlurHome1,
          LingkaranBlurHomeAtas;
 
-@FXML
-private Label test,cek;
+
 
 @FXML
-private Button btnLocation;
+private Button btnLocation,btnLogin;
+
+    @FXML
+    public TextField txtNama;
 
    @FXML
-    private TextField txtNama,txtEmail,txtPassword,txtUsername,txtAlamat,txtConfirmPassword;
+    private TextField txtEmail,txtPassword,txtUsername,txtAlamat,txtConfirmPassword;
     
        @FXML
     private FlowPane container;
@@ -88,20 +108,26 @@ private Button btnLocation;
     
     //pindah ke signUp
    @FXML 
-    private void showSignUp(ActionEvent event) throws IOException{
+    protected void showSignUp(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader(
             getClass().getResource("/com/mycompany/tugasAkhir1/signUp.fxml"));
         
-        Parent root = loader.load();
-        Scene scene = ((Node) event.getSource()).getScene();
+        Parent root;
+        try {
+            root = loader.load();
+            Scene scene = ((Node) event.getSource()).getScene();
         
         scene.setRoot(root);
+        } catch (IOException ex) {
+            System.getLogger(Controller.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        }
+        
     }
     
     //pindah ke profile
     
     @FXML
-    private void showLogin(ActionEvent event) throws IOException{
+    protected void showLogin(ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(
         getClass().getResource("/com/mycompany/tugasAkhir1/login.fxml"));
         
@@ -112,24 +138,9 @@ private Button btnLocation;
         
 }
     
-   //pindah ke homescreen
-   
-    
-      @FXML
-   private void showHome(ActionEvent event) throws IOException{
-   FXMLLoader loader = new FXMLLoader(
-        getClass().getResource("/com/mycompany/tugasAkhir1/Home.fxml"));
-   
-        Parent root = loader.load();
-        Scene scene = ((Node) event.getSource()).getScene();
-        scene.setRoot(root);
-  
-   BoxBlur blur = new BoxBlur();
-   blur.setHeight(200);
-    blur.setWidth(200);
-     }
+
    @FXML
-   private void showLocation(ActionEvent event) throws IOException{
+   protected void showLocation(ActionEvent event) throws IOException{
        FXMLLoader loader = new FXMLLoader(
             getClass().getResource("/com/mycompany/tugasAkhir1/location.fxml"));
        
@@ -141,85 +152,63 @@ private Button btnLocation;
    }
    
    //pengecekan username
-    private boolean cekUsername(){
-        
-        String username = txtUsername.getText();
-    CRUD su = new CRUD();
-   boolean duplicate = su.CekUsername(username);
-   cek.setVisible(duplicate);
-   if(username.isEmpty()){
-   cek.setVisible(false);}
-   return duplicate;
-    }
-    //ikut diatas
-    @FXML
-    private void onKeyReleasedcekUsername(KeyEvent event){
-    cekUsername();
-    }
-    
-    //pengecekan password
-    private boolean cekPassword(){
-    String password = txtPassword.getText();
-    String cekPassword = txtConfirmPassword.getText();
-    boolean benar = cekPassword.equals(password);
-    test.setVisible(!benar);
-    return benar;
-    }
-   @FXML
-   private void onKeyReleasedcekPassword(KeyEvent event){
-    cekPassword();
-   }
-   
-  @FXML
-  private void Daftar() throws IOException, SQLException{
-    String nama = txtNama.getText();
-    String email = txtEmail.getText();
-    String password = txtPassword.getText();
-    String alamat = txtAlamat.getText();
-    String username = txtUsername.getText();
-    String cekPassword = txtConfirmPassword.getText();
-    
-    if(nama.isEmpty() || email.isEmpty() || password.isEmpty() || alamat.isEmpty()){
-       AlertAlert.AlertTemplate(AlertType.WARNING, "kolom todak boleh kosong");
-       }
-   if(cekPassword()){
-        CRUD su = new CRUD();
-        su.InputToDatabase(username, password, nama, email, alamat);
-        
-        System.out.println("Berhasil");}
-    else{
-       
-         AlertAlert.AlertTemplate(AlertType.WARNING,"Password tidak sama");
-        
-    }
-  }
   
-  @FXML
-  private void Login(ActionEvent event) throws IOException{
-    String email = txtEmail.getText();
-    String password = txtPassword.getText();
-    String username = txtEmail.getText();
-    CRUD cari = new CRUD();
+   
+  
+  
+  
+  
+  protected void Login(ActionEvent event) {
+     email = txtEmail.getText();
+     password = txtPassword.getText();
+    username = txtEmail.getText();
+ 
     
   if(txtEmail.getText().isEmpty() || txtPassword.getText().isEmpty()){
         AlertAlert.AlertTemplate(AlertType.WARNING,"Kolom tidak boleh kosong", ButtonType.OK, 5000);
         return;
   }
-profilKonsumen user = cari.Login(email, username, password);
+  
+profilKonsumen user = search(email,password);
 if(user != null ){
-    int idKonsumenLogin = user.getIdUser();
-    sesiAktif.setIdKonsumen(idKonsumenLogin);
+    sesiAktif(user);
+    sesiAktif.getInstance().setPathFile(user.getPathProfile());
+    System.out.println(user.getPathProfile());
     AlertAlert.AlertTemplate(AlertType.INFORMATION,"login berhasil",ButtonType.OK,1000);
-    FXMLLoader loader = new FXMLLoader (
-            getClass().getResource("/com/mycompany/tugasAkhir1/Home.fxml"));
-            Parent root = loader.load();
-            Scene scene = ((Node) event.getSource()).getScene();
-            scene.setRoot(root);}
+    SceneChanger.pindahScene("/com/mycompany/tugasAkhir1/Location.fxml",event);
+}else{
+    AlertAlert.AlertTemplate(AlertType.INFORMATION,"login gagal",ButtonType.OK,1000);
 }
+  }
+  
+  
+  protected void pindahScene(String fxml,ActionEvent event){
+    FXMLLoader loader = new FXMLLoader (
+            getClass().getResource(fxml));
+            Parent root;
+            
+         try {
+             root = loader.load();
+             Scene scene = ((Node) event.getSource()).getScene();
+            scene.setRoot(root);
+         } catch (IOException ex) {
+             System.getLogger(Controller.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+         }
+            
+}
+  protected  profilKonsumen search(String email,String password){
+    DaoKonsumen cari = new DaoKonsumen();
+    return cari.Login(email, password);
+  }
+  
+  protected void sesiAktif(profilKonsumen user){
+  sesiAktif.getInstance().setIdKonsumen(user.getIdUser());
+  }
 
 
   
   }
+
   
   
    

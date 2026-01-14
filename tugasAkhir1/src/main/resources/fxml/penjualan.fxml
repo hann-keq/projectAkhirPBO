@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleNode?>
+<?import java.lang.String?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" snapToPixel="false" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.Dashboard.PenjualanController">
+   <children>
+      <Group layoutX="-4.0" layoutY="-1.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#38a10026" height="103.0" stroke="WHITE" strokeType="INSIDE" styleClass="rectangle" width="1924.0" />
+            <Label fx:id="titleColored" layoutX="42.0" layoutY="28.0" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" text="FoodCycle" textFill="#44c300">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Group layoutX="1549.9000244140625" layoutY="30.899999618530273">
+               <children>
+                  <Group fx:id="groupCounter" layoutX="50.0" layoutY="7.0" visible="false">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="13.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                        <Label fx:id="lblCounter" alignment="CENTER" layoutX="-5.0" layoutY="-13.0" text="1" />
+                     </children>
+                  </Group>
+               </children>
+            </Group>
+            <JFXToggleNode fx:id="btnDashboard" layoutX="277.0" layoutY="46.0" selected="true" styleClass="jfx-toggle-button" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" text="Dashboard">
+               <toggleGroup>
+                  <ToggleGroup fx:id="menu" />
+               </toggleGroup>
+               <selectedColor>
+                  <Color opacity="0.0" />
+               </selectedColor>
+            </JFXToggleNode>
+            <JFXToggleNode fx:id="btnPengelola" layoutX="370.0" layoutY="46.0" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" text="Pengelola makanan" toggleGroup="$menu">
+               <selectedColor>
+                  <Color opacity="0.0" />
+               </selectedColor>
+               <styleClass>
+                  <String fx:value="jfx-rippler" />
+                  <String fx:value="jfx-toggle-button" />
+               </styleClass>
+            </JFXToggleNode>
+            <JFXButton fx:id="scan" layoutX="1717.0" layoutY="34.0" text="Scan Barcode" />
+            <JFXToggleNode fx:id="btnPenjualan" layoutX="530.0" layoutY="46.0" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" text="Penjualan" toggleGroup="$menu">
+               <selectedColor>
+                  <Color opacity="0.0" />
+               </selectedColor>
+               <styleClass>
+                  <String fx:value="jfx-rippler" />
+                  <String fx:value="jfx-toggle-button" />
+               </styleClass>
+            </JFXToggleNode>
+         </children>
+      </Group>
+      <Label layoutX="201.0" layoutY="669.0" text="Riwayat Penjualan">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <HBox layoutX="204.0" layoutY="711.0" />
+      <ScrollPane layoutX="196.0" layoutY="722.0" prefHeight="345.0" prefWidth="1560.0" styleClass="scrollPane" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css">
+         <content>
+            <FlowPane fx:id="container" prefHeight="296.0" prefWidth="1553.0" styleClass="scrollPane" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" />
+         </content>
+      </ScrollPane>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#f5d66c" height="405.0" layoutX="193.0" layoutY="235.0" stroke="WHITE" strokeType="INSIDE" width="1547.0" />
+      <Label layoutX="217.0" layoutY="173.0" text="Saldo Penjualan">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="1580.0" layoutY="586.0" text="Withdrawal" />
+      <Label fx:id="lblSaldo" layoutX="284.0" layoutY="353.0" prefHeight="165.0" prefWidth="1351.0" text="Rp. 999.999.999.999..999">
+         <font>
+            <Font size="70.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

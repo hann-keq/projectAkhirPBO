@@ -19,7 +19,6 @@
 <?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" snapToPixel="false" stylesheets="@fonts/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.Home.HomeController">
    <children>
@@ -49,16 +48,7 @@
          <effect>
             <GaussianBlur radius="63.0" />
          </effect></Ellipse>
-      <Group layoutX="168.0" layoutY="118.0">
-         <children>
-            <Text fill="#246600" layoutX="36.0" layoutY="12.1015625" strokeType="OUTSIDE" strokeWidth="0.0" text="Mencari Makanan Disekitar">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Text>
-            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#44c20059" height="47.0" layoutX="8.0" layoutY="-21.0" stroke="#44c30000" strokeType="INSIDE" width="452.0" />
-         </children>
-      </Group>
+      <Group layoutX="168.0" layoutY="118.0" />
       <Group layoutX="175.0" layoutY="165.0" />
       <Group layoutX="1010.0" layoutY="259.0" />
       <Group layoutX="812.0" layoutY="263.0" />
@@ -79,7 +69,7 @@
             </Label>
             <Group layoutX="1549.9000244140625" layoutY="30.899999618530273">
                <children>
-                  <JFXButton buttonType="RAISED" graphicTextGap="20.0" layoutX="4.0999755859375" layoutY="3.1000003814697266" lineSpacing="10.0" prefHeight="46.0" prefWidth="115.0" stylesheets="@fonts/style.css" text="Cart">
+                  <JFXButton fx:id="btnKeranjang" buttonType="RAISED" graphicTextGap="20.0" layoutX="4.0999755859375" layoutY="3.1000003814697266" lineSpacing="10.0" prefHeight="46.0" prefWidth="115.0" stylesheets="@fonts/style.css" text="Cart">
                      <graphic>
                         <FontAwesomeIcon glyphName="SHOPPING_CART" size="2em" />
                      </graphic>
@@ -92,7 +82,7 @@
                   </Group>
                </children>
             </Group>
-            <JFXToggleNode layoutX="277.0" layoutY="46.0" selected="true" styleClass="jfx-toggle-button" stylesheets="@fonts/style.css" text="Jelajahi">
+            <JFXToggleNode fx:id="btnjelajahi" layoutX="277.0" layoutY="46.0" selected="true" styleClass="jfx-toggle-button" stylesheets="@fonts/style.css" text="Jelajahi">
                <toggleGroup>
                   <ToggleGroup fx:id="menu" />
                </toggleGroup>
@@ -100,7 +90,7 @@
                   <Color opacity="0.0" />
                </selectedColor>
             </JFXToggleNode>
-            <JFXToggleNode layoutX="370.0" layoutY="46.0" stylesheets="@fonts/style.css" text="Pesanan Saya" toggleGroup="$menu">
+            <JFXToggleNode fx:id="btnPesanan" layoutX="370.0" layoutY="46.0" stylesheets="@fonts/style.css" text="Pesanan Saya" toggleGroup="$menu">
                <selectedColor>
                   <Color opacity="0.0" />
                </selectedColor>
@@ -165,6 +155,6 @@
          </selectedColor>
       </JFXToggleNode>
       <TextField fx:id="txtCari" layoutX="214.0" layoutY="193.0" prefHeight="35.0" prefWidth="1494.0" promptText="Ketuk untuk mencari" styleClass="textField" stylesheets="@fonts/style.css" />
-      <JFXButton fx:id="btnCari" layoutX="1757.0" layoutY="187.0" text="Cari" />
+      <Label fx:id="lblLokasi" layoutX="214.0" layoutY="147.0" prefHeight="25.0" prefWidth="128.0" text="Cari makanan" />
    </children>
 </AnchorPane>

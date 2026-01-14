@@ -5,8 +5,6 @@
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Rectangle?>
@@ -31,11 +29,7 @@
             <Label fx:id="lblTanggal" layoutX="59.0" layoutY="245.0" text="Label" />
             <Label fx:id="lblNama" layoutX="53.0" layoutY="197.0" styleClass="labelTitle" stylesheets="@fonts/style.css" text="Label" />
             <JFXButton fx:id="BtnPilih" layoutX="112.0" layoutY="426.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #44C300;" />
-            <ImageView fx:id="myImage" fitHeight="139.0" fitWidth="314.0" layoutX="56.0" layoutY="34.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../../../photos/brokoli.jpeg" />
-               </image>
-            </ImageView>
+            <Rectangle fx:id="myImage" arcHeight="30.0" arcWidth="30.0" fill="DODGERBLUE" height="139.0" layoutX="55.0" layoutY="32.0" stroke="WHITE" strokeType="INSIDE" width="314.0" />
          </children>
       </Group>
    </children>
