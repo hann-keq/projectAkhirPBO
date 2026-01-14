@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" snapToPixel="false" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.AdminController.SignUpAdminController">
+   <children>
+      <Ellipse fx:id="LingkaranBlurHomeAtas" layoutX="240.0" layoutY="240.0" radiusX="337.0" radiusY="610.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="0.32701421800947866" endY="0.8009478672985781" startX="0.33175355450236965" startY="0.02369668246445497">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2666666805744171" green="0.7647058963775635" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9736841917037964" green="0.9736841917037964" blue="0.9736841917037964" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Ellipse>
+      <Ellipse fx:id="LingkaranBlurHome" layoutX="1588.0" layoutY="1486.0" radiusX="437.0" radiusY="722.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="0.4218009478672986" endY="0.5639810426540284" startX="0.1611374407582938">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2666666805744171" green="0.7647058963775635" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9736841917037964" green="0.9736841917037964" blue="0.9736841917037964" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Ellipse>
+      <Group layoutX="608.0" layoutY="110.0">
+         <children>
+            <Button fx:id="btnLogin" layoutY="113.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="296.0" style="-fx-focus-traversable: false;" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" text="Login">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Button>
+            <Label layoutX="202.0" text="FoodCycle">
+               <font>
+                  <Font name="System Bold" size="52.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSignUp" defaultButton="true" disable="true" layoutX="356.0" layoutY="112.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="296.0" style="-fx-focus-traversable: false;" stylesheets="@../com/mycompany/tugasakhir1/fonts/style.css" text="Buat Toko Baru">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Button>
+            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="703.0" layoutX="31.0" layoutY="220.0" stroke="#44c20073" strokeType="INSIDE" width="610.0">
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="4.0">
+                     <color>
+                        <Color opacity="0.25" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Rectangle>
+            <TextField fx:id="txtEmail" layoutX="63.0" layoutY="472.0" prefHeight="25.0" prefWidth="544.0" />
+            <TextField fx:id="txtNamaToko" layoutX="68.0" layoutY="600.0" prefHeight="25.0" prefWidth="544.0" />
+            <Label layoutX="63.0" layoutY="447.0" text="Email">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="566.0" text="Nama Toko">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnDaftar" layoutX="63.0" layoutY="843.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="544.0" style="-fx-background-color: #2A7700; -fx-border-radius: 20; -fx-background-radius: 20;" text="Daftar" textFill="WHITE" />
+            <Label layoutX="61.0" layoutY="631.0" text="Alamat Toko">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtAlamatToko" layoutX="66.0" layoutY="656.0" prefHeight="25.0" prefWidth="544.0" />
+            <TextField fx:id="txtNama" layoutX="63.0" layoutY="347.0" onKeyReleased="#onKeyReleasedcekUsername" prefHeight="25.0" prefWidth="544.0" />
+            <Label layoutX="67.0" layoutY="322.0" text="Nama Lengkap">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtAlamat" layoutX="65.0" layoutY="538.0" prefHeight="25.0" prefWidth="544.0" />
+            <Label layoutX="61.0" layoutY="504.0" text="Alamat">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="249.0" text="Buat Toko Baru">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="690.0" text="Password">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtPassword" layoutX="66.0" layoutY="715.0" onKeyReleased="#onKeyReleasedcekPassword" prefHeight="25.0" prefWidth="544.0" />
+            <Label fx:id="cekPassword" layoutX="509.0" layoutY="813.0" text="Password tidak sama">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="cek" layoutX="464.0" layoutY="447.0" text="Username sudah digunakann">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="753.0" text="Konfirmasi Password">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtConfirmPassword" layoutX="67.0" layoutY="778.0" onKeyReleased="#onKeyReleasedcekPassword" prefHeight="25.0" prefWidth="544.0" />
+            <TextField fx:id="txtUsername" layoutX="61.0" layoutY="409.0" onKeyReleased="#onKeyReleasedcekUsername" prefHeight="25.0" prefWidth="544.0" />
+            <Label layoutX="65.0" layoutY="384.0" text="Username">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+   </children>
+</AnchorPane>

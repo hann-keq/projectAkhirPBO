@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane depthTest="ENABLE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200.0" minWidth="1502.0" prefHeight="273.0" prefWidth="1502.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="189.0" layoutY="26.0" prefHeight="31.0" prefWidth="178.0" text="Nama Makanan">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="189.0" layoutY="62.0" prefHeight="32.0" prefWidth="206.0" text="Pesanan #TGTG-000">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="189.0" layoutY="101.0" prefHeight="32.0" prefWidth="165.0" text="Waktu Pengambilan">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="190.0" layoutY="138.0" text="Hari ini 12:00 - 14:30">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="456.0" layoutY="61.0" prefHeight="32.0" prefWidth="167.0" text="Lokasi ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="458.0" layoutY="99.0" prefHeight="32.0" prefWidth="238.0" text="Jl. Donan No. 45, Jakarta Timur ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="779.0" layoutY="62.0" prefHeight="32.0" prefWidth="167.0" text="Pembelian">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="780.0" layoutY="100.0" prefHeight="32.0" prefWidth="238.0" text="3 Item">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#47c20042" height="41.0" layoutX="1253.0" layoutY="33.0" stroke="#00000039" strokeType="INSIDE" width="223.0" AnchorPane.leftAnchor="1253.0" />
+      <Label layoutX="1278.0" layoutY="41.0" text="Menunggu Pengambilan">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button cacheShape="false" layoutX="1361.0" layoutY="136.0" mnemonicParsing="false" text="Lihat Detail ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#59eb5c63" height="62.0" layoutX="-6.0" layoutY="213.0" stroke="#0000005b" strokeType="INSIDE" width="1510.0" />
+      <Label layoutX="478.0" layoutY="230.0" text="Terima Kasih telah membantu mengurangi food waste!">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="136.0" fitWidth="134.0" layoutX="24.0" layoutY="24.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../Downloads/food-pattern-close-up-close%20(2).jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="191.0" layoutY="167.0" prefHeight="32.0" prefWidth="206.0" text="Rp 15.000">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+
+<FlowPane fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="515.0" styleClass="container" stylesheets="@fonts/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.CardMakananController">
+   <children>
+      <Group>
+         <children>
+            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="482.0" layoutX="26.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" width="370.0">
+               <effect>
+                  <DropShadow offsetY="4.0" spread="0.4">
+                     <color>
+                        <Color opacity="0.25" />
+                     </color>
+                  </DropShadow>
+               </effect></Rectangle>
+            <Label fx:id="lblToko" layoutX="279.0" layoutY="384.0" text="Label" />
+            <Label fx:id="lblJarak" layoutX="279.0" layoutY="354.0" text="Label" />
+            <Label fx:id="lblHarga" layoutX="34.0" layoutY="383.0" text="Label" />
+            <Label fx:id="lblLokasi" layoutX="58.0" layoutY="312.0" text="Label" />
+            <Label fx:id="lblBerat" layoutX="58.0" layoutY="274.0" text="Label" />
+            <Label fx:id="lblTanggal" layoutX="59.0" layoutY="245.0" text="Label" />
+            <Label fx:id="lblNama" layoutX="53.0" layoutY="197.0" styleClass="labelTitle" stylesheets="@fonts/style.css" text="Label" />
+            <JFXButton fx:id="BtnPilih" layoutX="112.0" layoutY="426.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #44C300;" />
+            <Rectangle fx:id="myImage" arcHeight="30.0" arcWidth="30.0" fill="DODGERBLUE" height="139.0" layoutX="55.0" layoutY="32.0" stroke="WHITE" strokeType="INSIDE" width="314.0" />
+         </children>
+      </Group>
+   </children>
+   <padding>
+      <Insets left="70.0" top="20.0" />
+   </padding>
+</FlowPane>

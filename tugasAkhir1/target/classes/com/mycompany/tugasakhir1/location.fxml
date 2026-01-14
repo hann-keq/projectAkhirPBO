@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" snapToPixel="false" stylesheets="@fonts/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.Location.LocationController">
+   <children>
+      <Text fill="#4a7930" layoutX="714.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selamat Datang,Pengguna">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Text>
+      <Text layoutX="895.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mari pilih lokasi">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="30" arcWidth="30" fill="WHITE" height="687.0" layoutX="672.0" layoutY="238.0" stroke="#2f61149c" strokeType="INSIDE" width="598.0" />
+      <Text layoutX="726.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pilih lokasi">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="728.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ini Membantu mencari makanan di area anda">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="732.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mencari lokasi">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Ellipse fx:id="cobaLingkaranBlur1" fill="#44c200b5" layoutX="1920.0" layoutY="45.0" radiusX="437.0" radiusY="722.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" />
+      <Ellipse fx:id="cobaLingkaranBlur" fill="#44c3009c" layoutX="43.0" layoutY="1376.0" radiusX="437.0" radiusY="722.0" stroke="TRANSPARENT" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" />
+      <JFXButton fx:id="btnNext" buttonType="RAISED" layoutX="749.0" layoutY="827.0" prefHeight="46.0" prefWidth="435.0" style="-fx-background-color: #2A7700; -fx-border-radius: 30; -fx-background-radius: 30;" text="Tekan untuk melanjutkan" textFill="WHITE" />
+      <Label fx:id="lblLokasi" layoutX="787.0" layoutY="759.0" text="Lokasi" />
+      <ScrollPane layoutX="749.0" layoutY="503.0" prefHeight="243.0" prefWidth="461.0">
+         <content>
+            <FlowPane fx:id="container" prefHeight="64.0" prefWidth="456.0" />
+         </content>
+      </ScrollPane>
+      <TextField fx:id="txtCari" layoutX="744.0" layoutY="440.0" prefHeight="35.0" prefWidth="467.0" promptText="cari disini" />
+   </children>
+</AnchorPane>

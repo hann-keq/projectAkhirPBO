@@ -4,6 +4,7 @@ com\mycompany\tugasakhir1\CardMakananController.class
 com\mycompany\tugasakhir1\Controller.class
 com\mycompany\tugasakhir1\cartController\EmptyCartController.class
 com\mycompany\tugasakhir1\sesiAktif$HelperClass.class
+com\mycompany\tugasakhir1\LoadingScreenController$1.class
 com\mycompany\tugasakhir1\RincianPesananController.class
 com\mycompany\tugasakhir1\Home\HomeController$1.class
 com\mycompany\tugasakhir1\sesiAktif.class
@@ -38,6 +39,7 @@ com\mycompany\tugasakhir1\DaoKonsumen.class
 com\mycompany\tugasakhir1\cartController\Basecomponent.class
 com\mycompany\tugasakhir1\cardPesanan\CardPesananController.class
 com\mycompany\tugasakhir1\BaseLogin$Login.class
+com\mycompany\tugasakhir1\LoadingScreenController.class
 com\mycompany\tugasakhir1\cartController\cardCartController.class
 com\mycompany\tugasakhir1\Profile\profilKonsumen.class
 com\mycompany\tugasakhir1\AdminController\ScanBarcodeController.class
@@ -53,7 +55,6 @@ com\mycompany\tugasakhir1\ScanBarcode.class
 com\mycompany\tugasakhir1\Profile\editProfileController.class
 com\mycompany\tugasakhir1\Profile\profileController.class
 com\mycompany\tugasakhir1\cardRiwayatPesananController.class
-com\mycompany\tugasakhir1\Home\HomeController$2.class
 com\mycompany\tugasakhir1\AdminController\LoginAdminController.class
 com\mycompany\tugasakhir1\AdminController\TambahMakananController.class
 com\mycompany\tugasakhir1\detailPesananController.class

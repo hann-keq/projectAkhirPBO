@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="187.0" prefWidth="1124.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.tugasakhir1.cartController.cardCartController">
+   <children>
+      <Group>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="188.0" stroke="BLACK" strokeType="INSIDE" width="1123.0" />
+            <HBox layoutX="37.0">
+               <children>
+                  <JFXCheckBox fx:id="cbCheck" text=" ">
+                     <HBox.margin>
+                        <Insets top="83.0" />
+                     </HBox.margin>
+                  </JFXCheckBox>
+                  <Rectangle fx:id="myItem" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" stroke="BLACK" strokeType="INSIDE" width="161.0">
+                     <HBox.margin>
+                        <Insets left="34.0" top="18.0" />
+                     </HBox.margin>
+                  </Rectangle>
+                  <VBox prefHeight="200.0" prefWidth="216.0">
+                     <HBox.margin>
+                        <Insets left="22.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label fx:id="lblNama" text="Name">
+                           <VBox.margin>
+                              <Insets top="27.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Waktu ambil" />
+                        <Label fx:id="lblWaktu" prefHeight="17.0" prefWidth="194.0" text="label" />
+                        <Label fx:id="lblAlamat" text="alamat">
+                           <VBox.margin>
+                              <Insets top="34.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label fx:id="lblJumlah" layoutX="994.0" layoutY="86.0" text="Label" />
+            <Label fx:id="lblHarga" layoutX="994.0" layoutY="141.0" text="Harga" />
+         </children>
+      </Group>
+   </children>
+</FlowPane>
